@@ -41,6 +41,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 :root{
   --ink:#0B0B12; --red:#DD033F; --paper:#FFFFFF; --paper-2:#F4F4F6;
   --gray:#6E6E78; --line:#E4E4E8; --line-dark:#23232D;
@@ -132,6 +133,10 @@ nav .btn:hover{background:var(--red)}
 .transf .frase{color:#D8D8DE}
 
 /* CAMADA — diagrama */
+.camada .opening{margin:64px auto 0;max-width:860px}
+.camada .opening svg{width:100%;height:auto;display:block}
+.opening-cap{text-align:center;color:var(--gray);font-size:15.5px;margin-top:10px}
+@media(max-width:640px){.camada .opening{max-width:100%}.opening-cap{font-size:14px}}
 .camada .diagrama{margin:64px auto 0;max-width:860px}
 .camada .diagrama svg{width:100%;height:auto;display:block}
 .camada .nota{text-align:center;color:var(--gray);margin-top:26px;font-size:16px}
@@ -310,7 +315,7 @@ footer img{height:48px;opacity:.95}
       </div>
       <div class="gatilho">
         <div class="num">05</div>
-        <h3>E no fim, tudo desagua em você: <em>o CEO virou o gargalo.</em></h3>
+        <h3>E no fim, tudo desagua em você. <em>Quem lidera vira o gargalo.</em></h3>
         <div class="rec">
           <p>Longe do escritório, a visibilidade some — e o celular não para.</p>
           <p>O fim de semana termina com a planilha aberta.</p>
@@ -319,14 +324,14 @@ footer img{height:48px;opacity:.95}
       </div>
     </div>
 
-    <p class="fecho">O problema não é falta de dados. Sua empresa está cheia deles.<br><span class="serif">O problema é falta de visibilidade.</span></p>
+    <p class="fecho">O problema não é falta de dados.<br>Sua empresa está cheia deles.<br><span class="serif">O problema é falta de visibilidade.</span></p>
   </div>
 </section>
 
 <section class="transf" id="transformacao">
   <div class="wrap reveal">
     <span class="kicker" style="color:#fff">A transformação</span>
-    <h2>Do caos de sistemas<br>a <span class="serif">um único organismo inteligente.</span></h2>
+    <h2>Do caos de softwares<br><span class="serif">a um único organismo inteligente.</span></h2>
     <div class="ba-grid">
       <div class="ba antes">
         <header><span>ANTES</span><span>SISTEMAS ISOLADOS</span></header>
@@ -459,6 +464,42 @@ footer img{height:48px;opacity:.95}
     <span class="kicker">A camada que faltava</span>
     <h2>Os sistemas continuam existindo.<br><span class="serif">A complexidade deixa de chegar até você.</span></h2>
     <p class="lead">A OpenBI não substitui seu ERP, CRM ou BI. Ela cria uma camada cognitiva acima do que já existe — que entende contexto, respeita permissões e coordena tudo por linguagem natural. Seu investimento anterior finalmente entrega o potencial completo.</p>
+    <div class="opening">
+      <svg viewBox="0 0 900 210" class="svgt" aria-label="A abertura: de fragmentado e fechado, para unificado e visível">
+        <defs>
+          <radialGradient id="clarityGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#DD033F" stop-opacity=".9"/>
+            <stop offset="55%" stop-color="#DD033F" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#DD033F" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- 1: fragmentado -->
+        <g fill="#0B0B12">
+          <circle cx="86" cy="62" r="6"/><circle cx="122" cy="46" r="5"/><circle cx="146" cy="84" r="6"/>
+          <circle cx="98" cy="104" r="5"/><circle cx="134" cy="120" r="6"/><circle cx="72" cy="132" r="5"/>
+          <circle cx="158" cy="52" r="4"/>
+        </g>
+        <text x="115" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">FRAGMENTADO</text>
+        <path d="M215 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
+        <!-- 2: acesso fechado -->
+        <g transform="translate(345,92)">
+          <path d="M 21.9 -17.5 A 28 28 0 1 0 21.9 17.5" fill="none" stroke="#0B0B12" stroke-width="7.6"/>
+        </g>
+        <text x="345" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO FECHADO</text>
+        <path d="M445 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
+        <!-- 3: acesso aberto -->
+        <g transform="translate(575,92)">
+          <path d="M 21.9 -17.5 A 28 28 0 1 0 21.9 17.5" fill="none" stroke="#0B0B12" stroke-width="7.6"/>
+          <circle cx="24.2" cy="0.4" r="8" fill="#DD033F"/>
+        </g>
+        <text x="575" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO ABERTO</text>
+        <path d="M675 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
+        <!-- 4: clareza -->
+        <circle cx="805" cy="92" r="44" fill="url(#clarityGlow)"/>
+        <text x="805" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">CLAREZA</text>
+      </svg>
+      <p class="opening-cap">De fragmentado e fechado, para unificado e visível. Os dados viram contexto. O contexto alimenta a IA. A IA sustenta as decisões.</p>
+    </div>
     <div class="diagrama">
       <svg viewBox="0 0 860 300" class="svgt" aria-label="Diagrama: uma conversa acima, camada OpenBI no meio, sistemas abaixo">
         <g transform="translate(280,10)">
