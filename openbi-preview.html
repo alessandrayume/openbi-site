@@ -44,6 +44,7 @@
 
 
 
+
 :root{
   --ink:#0B0B12; --red:#DD033F; --paper:#FFFFFF; --paper-2:#F4F4F6;
   --gray:#6E6E78; --line:#E4E4E8; --line-dark:#23232D;
@@ -94,6 +95,12 @@ nav .btn:hover{background:var(--red)}
 .hero h1 .serif{display:block;font-size:.96em}
 .hero .sub{font-size:clamp(18px,2.2vw,22px);color:#3E3E48;max-width:780px;margin:36px 0 44px}
 .cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.hero .sub{margin-top:8px}
+.hero h1{margin-bottom:40px}
+.abertura{margin-top:96px;padding-top:64px;border-top:1px solid var(--line)}
+.abertura .opening{margin:56px auto 0;max-width:860px}
+.abertura .opening svg{width:100%;height:auto;display:block}
+.abertura-frase{font-size:clamp(28px,4.2vw,50px);margin-top:40px;text-align:center}
 .triad{display:flex;gap:0;margin-top:72px;border-top:1px solid var(--line)}
 .triad div{flex:1;padding:22px 26px 0 0;font-size:12.5px;letter-spacing:.22em;font-weight:600;color:var(--ink)}
 .triad div span{color:var(--red)}
@@ -258,11 +265,46 @@ footer img{height:48px;opacity:.95}
   <div class="halo" aria-hidden="true"></div>
   <div class="wrap">
     <span class="kicker">E se a sua empresa <b>falasse?</b></span>
+    <p class="sub">A OpenBI transforma sistemas, dados e processos fragmentados em uma única camada de inteligência, substituindo dezenas de interfaces desconexas por uma única conversa com IA.</p>
     <h1>Sua empresa inteira.<br><span class="serif">Finalmente ao alcance</span> de uma conversa.</h1>
-    <p class="sub">A OpenBI transforma sistemas, dados e processos fragmentados em uma única camada de inteligência — para você entender, decidir e agir sem carregar a complexidade da empresa sozinho.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#agendar">Agendar call de 15 minutos</a>
       <a class="btn btn-ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <div class="abertura reveal">
+      <p class="lead">A OpenBI não substitui seu ERP, CRM ou BI. Ela cria uma camada cognitiva acima do que já existe — que entende contexto, respeita permissões e coordena tudo por linguagem natural.</p>
+      <div class="opening">
+        <svg viewBox="0 0 900 210" class="svgt" aria-label="A abertura: de fragmentado e fechado, para unificado, visível, conversável">
+          <defs>
+            <radialGradient id="clarityGlowHero" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#DD033F" stop-opacity=".9"/>
+              <stop offset="55%" stop-color="#DD033F" stop-opacity=".35"/>
+              <stop offset="100%" stop-color="#DD033F" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <g fill="#0B0B12">
+            <circle cx="86" cy="62" r="6"/><circle cx="122" cy="46" r="5"/><circle cx="146" cy="84" r="6"/>
+            <circle cx="98" cy="104" r="5"/><circle cx="134" cy="120" r="6"/><circle cx="72" cy="132" r="5"/>
+            <circle cx="158" cy="52" r="4"/>
+          </g>
+          <text x="115" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">FRAGMENTADO</text>
+          <path d="M215 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
+          <g transform="translate(345,92)">
+            <path d="M 21.9 -17.5 A 28 28 0 1 0 21.9 17.5" fill="none" stroke="#0B0B12" stroke-width="7.6"/>
+          </g>
+          <text x="345" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO FECHADO</text>
+          <path d="M445 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
+          <g transform="translate(575,92)">
+            <path d="M 21.9 -17.5 A 28 28 0 1 0 21.9 17.5" fill="none" stroke="#0B0B12" stroke-width="7.6"/>
+            <circle cx="24.2" cy="0.4" r="8" fill="#DD033F"/>
+          </g>
+          <text x="575" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO ABERTO</text>
+          <path d="M675 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
+          <circle cx="805" cy="92" r="44" fill="url(#clarityGlowHero)"/>
+          <text x="805" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">CLAREZA</text>
+        </svg>
+      </div>
+      <h2 class="abertura-frase">De fragmentado e fechado,<br><span class="serif">para unificado, visível, conversável.</span></h2>
     </div>
     <div class="triad">
       <div>CLAREZA PARA LIDERAR<span>.</span></div>
@@ -446,42 +488,6 @@ footer img{height:48px;opacity:.95}
     <span class="kicker">A camada que faltava</span>
     <h2>Os sistemas continuam existindo.<br><span class="serif">A complexidade deixa de chegar até você.</span></h2>
     <p class="lead">A OpenBI não substitui seu ERP, CRM ou BI. Ela cria uma camada cognitiva acima do que já existe — que entende contexto, respeita permissões e coordena tudo por linguagem natural. Seu investimento anterior finalmente entrega o potencial completo.</p>
-    <div class="opening">
-      <svg viewBox="0 0 900 210" class="svgt" aria-label="A abertura: de fragmentado e fechado, para unificado e visível">
-        <defs>
-          <radialGradient id="clarityGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#DD033F" stop-opacity=".9"/>
-            <stop offset="55%" stop-color="#DD033F" stop-opacity=".35"/>
-            <stop offset="100%" stop-color="#DD033F" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <!-- 1: fragmentado -->
-        <g fill="#0B0B12">
-          <circle cx="86" cy="62" r="6"/><circle cx="122" cy="46" r="5"/><circle cx="146" cy="84" r="6"/>
-          <circle cx="98" cy="104" r="5"/><circle cx="134" cy="120" r="6"/><circle cx="72" cy="132" r="5"/>
-          <circle cx="158" cy="52" r="4"/>
-        </g>
-        <text x="115" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">FRAGMENTADO</text>
-        <path d="M215 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
-        <!-- 2: acesso fechado -->
-        <g transform="translate(345,92)">
-          <path d="M 21.9 -17.5 A 28 28 0 1 0 21.9 17.5" fill="none" stroke="#0B0B12" stroke-width="7.6"/>
-        </g>
-        <text x="345" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO FECHADO</text>
-        <path d="M445 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
-        <!-- 3: acesso aberto -->
-        <g transform="translate(575,92)">
-          <path d="M 21.9 -17.5 A 28 28 0 1 0 21.9 17.5" fill="none" stroke="#0B0B12" stroke-width="7.6"/>
-          <circle cx="24.2" cy="0.4" r="8" fill="#DD033F"/>
-        </g>
-        <text x="575" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO ABERTO</text>
-        <path d="M675 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
-        <!-- 4: clareza -->
-        <circle cx="805" cy="92" r="44" fill="url(#clarityGlow)"/>
-        <text x="805" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">CLAREZA</text>
-      </svg>
-      <p class="opening-cap">De fragmentado e fechado, para unificado e visível. Os dados viram contexto. O contexto alimenta a IA. A IA sustenta as decisões.</p>
-    </div>
     <div class="diagrama">
       <svg viewBox="0 0 860 300" class="svgt" aria-label="Diagrama: uma conversa acima, camada OpenBI no meio, sistemas abaixo">
         <g transform="translate(280,10)">
