@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OpenBI — Sua empresa inteira, ao alcance de uma conversa</title>
-<meta name="description" content="O Sistema de Inteligência Empresarial que transforma sua empresa em uma Empresa Conversável: controle e visibilidade sobre todo o negócio, acessíveis por uma pergunta.">
+<title>OpenBI - Você pergunta. A empresa responde.</title>
+<meta name="description" content="Executive Intelligence: a OpenBI conecta os sistemas da sua empresa e transforma dados, reuniões e decisões em contexto executivo - acessível por uma conversa. Você pergunta. A empresa responde.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,20 +49,29 @@ nav .btn:hover{background:var(--red)}
 
 /* HERO */
 .hero{padding:130px 0 90px;position:relative;overflow:hidden}
-.hero .halo{position:absolute;right:-60px;top:140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(221,3,63,.42) 0%,rgba(221,3,63,.12) 45%,transparent 68%);pointer-events:none}
-
-.hero .halo::after{content:"";position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--red)}
-@media(max-width:900px){.hero .halo{display:none}}
+.hero-mark{display:none;position:absolute;pointer-events:none}
+.hero-mark img{display:block;width:100%;height:auto}
+.hero-mark span{display:block;margin-top:26px;text-align:center;font-size:11px;letter-spacing:.34em;color:#84848D;font-weight:600;white-space:nowrap}
 .hero .kicker{font-weight:300;text-transform:none;font-size:clamp(28px,4.4vw,56px);letter-spacing:-.02em;line-height:1.15;margin-bottom:34px;color:var(--ink)}
 .hero .kicker b{font-weight:600}
 .hero .kicker::before{width:14px;height:14px;margin-right:18px;vertical-align:6px}
 .hero h1{font-size:clamp(44px,7.2vw,92px);max-width:1000px}
 .hero h1 .serif{display:block;font-size:.96em}
-.hero .sub{font-size:clamp(18px,2.2vw,22px);color:#3E3E48;max-width:780px;margin:36px 0 44px}
+.hero .sub{font-size:clamp(16px,1.8vw,17.5px);line-height:1.75;color:#3E3E48;max-width:780px;margin:36px 0 44px}
+.hero .sub p{margin:0}
+.hero .sub p+p{margin-top:14px}
+.hero .sub strong{font-weight:600;color:var(--ink)}
+.hero .sub em{font-style:italic}
 .cta-row{display:flex;gap:16px;flex-wrap:wrap}
 .hero .sub{margin-top:8px}
 .hero h1{margin-bottom:40px}
 .abertura{margin-top:96px;padding-top:64px;border-top:1px solid var(--line)}
+.abertura .alead{font-size:clamp(18px,2.2vw,22px);line-height:1.75;color:#3E3E48;max-width:780px;margin-left:auto;margin-right:auto;text-align:center}
+.abertura .alead p{margin:0}
+.abertura .alead p+p{margin-top:14px}
+.abertura .alead strong{font-weight:600;color:var(--ink)}
+.abertura .alead em{font-style:italic}
+@media(max-width:640px){.abertura .alead br{display:none}}
 .abertura .opening{margin:56px auto 0;max-width:860px}
 .abertura .opening svg{width:100%;height:auto;display:block}
 .abertura-frase{font-size:clamp(28px,4.2vw,50px);margin-top:40px;text-align:center}
@@ -71,7 +80,7 @@ nav .btn:hover{background:var(--red)}
 .triad div span{color:var(--red)}
 @media(max-width:700px){.triad{flex-direction:column;gap:14px}}
 
-/* PROBLEMA — storytelling */
+/* PROBLEMA - storytelling */
 .problema{background:var(--paper)}
 .problema .abre{font-size:clamp(21px,2.9vw,34px);font-weight:600;letter-spacing:-.02em;line-height:1.5}
 .problema .abre .serif{font-weight:300}
@@ -84,7 +93,7 @@ nav .btn:hover{background:var(--red)}
 .gatilho h3 em{font-style:normal;font-weight:300}
 .gatilho .rec{color:#4A4A54;font-size:16.5px}
 .gatilho .rec p{margin-bottom:10px}
-.gatilho .rec p::before{content:"—";color:var(--red);margin-right:10px}
+.gatilho .rec p::before{content:"-";color:var(--red);margin-right:10px}
 .problema .fecho{margin-top:70px;font-size:clamp(24px,3.2vw,38px);font-weight:600;letter-spacing:-.02em}
 .problema .fecho .serif{color:var(--red);font-weight:300}
 
@@ -106,14 +115,60 @@ nav .btn:hover{background:var(--red)}
 .transf .frase .serif{color:#fff}
 .transf .frase{color:#D8D8DE}
 
-/* CAMADA — diagrama */
-.camada .opening{margin:64px auto 0;max-width:860px}
-.camada .opening svg{width:100%;height:auto;display:block}
-.opening-cap{text-align:center;color:var(--gray);font-size:15.5px;margin-top:10px}
-@media(max-width:640px){.camada .opening{max-width:100%}.opening-cap{font-size:14px}}
-.camada .diagrama{margin:64px auto 0;max-width:860px}
-.camada .diagrama svg{width:100%;height:auto;display:block}
-.camada .nota{text-align:center;color:var(--gray);margin-top:26px;font-size:16px}
+/* PROGRESSÃO OPENBI */
+.camada{overflow:hidden}
+.camada h2{font-weight:300}
+.camada h2 .serif{font-weight:600}
+.camada-segunda{display:block;margin-top:.18em}
+.progressao-wrap{margin-top:72px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);position:relative}
+.progressao-faixa{height:52px;display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--line);font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gray)}
+.progressao-faixa::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink);flex:0 0 auto}
+.progressao-faixa::after{content:"";height:1px;background:var(--line);flex:1}
+.progressao-scroll{overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#C2C2C9 transparent}
+.progressao{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;table-layout:fixed}
+.progressao col:first-child{width:142px}
+.progressao th,.progressao td{border:0;border-left:1px solid var(--ink);border-bottom:1px solid var(--line);vertical-align:top;text-align:left;background:var(--paper)}
+.progressao tr:last-child th,.progressao tr:last-child td{border-bottom:0}
+.progressao thead th{height:226px;padding:26px 22px 20px;position:relative;font-weight:400}
+.progressao thead th:first-child{border-left:0}
+.progressao tbody th{position:sticky;left:0;z-index:3;border-left:0;padding:20px 18px;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);box-shadow:1px 0 0 var(--ink)}
+.progressao tbody td{padding:20px 22px;font-size:14px;line-height:1.48;color:#33333D}
+.progressao .row-empresa th,.progressao .row-empresa td{height:82px}
+.progressao .row-tecnologia th,.progressao .row-tecnologia td{height:156px}
+.progressao .row-informacao th,.progressao .row-informacao td{height:82px}
+.progressao .row-lideranca th,.progressao .row-lideranca td{height:108px;vertical-align:middle}
+.progressao td strong{color:var(--ink);font-weight:600}
+.progress-canto{position:sticky!important;left:0;z-index:4;background:var(--paper)!important;box-shadow:1px 0 0 var(--ink)}
+.progress-canto span{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:calc(100% - 36px);font-size:9px;font-weight:600;letter-spacing:.19em;color:var(--red);text-transform:uppercase;line-height:1.6}
+.progress-canto::after,.progress-head:not(:last-child)::after{content:"›";position:absolute;right:-17px;top:92px;z-index:5;width:34px;height:34px;display:grid;place-items:center;background:var(--paper);color:var(--red);font-size:30px;font-weight:300;line-height:1}
+.prog-num{font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--gray)}
+.prog-meta{display:flex;align-items:center;justify-content:flex-start;gap:7px}
+.prog-camada-label{font-size:7.5px;font-weight:600;letter-spacing:.1em;line-height:1.25;color:var(--red);white-space:nowrap}
+.prog-visual{position:relative;height:152px;display:grid;place-items:center;margin-top:8px}
+.prog-fragmentos{position:relative;width:82px;height:72px}
+.prog-fragmentos i{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.prog-fragmentos i:nth-child(1){left:4px;top:26px}.prog-fragmentos i:nth-child(2){left:24px;top:4px}.prog-fragmentos i:nth-child(3){left:42px;top:21px}.prog-fragmentos i:nth-child(4){left:68px;top:7px}.prog-fragmentos i:nth-child(5){left:62px;top:48px}.prog-fragmentos i:nth-child(6){left:29px;top:57px}.prog-fragmentos i:nth-child(7){left:8px;top:55px}.prog-fragmentos i:nth-child(8){left:47px;top:40px}
+.prog-unificada{position:relative;width:76px;height:76px;border:1.5px solid var(--ink);border-radius:50%}
+.prog-unificada::before{content:"";position:absolute;inset:11px;border:1px solid #C2C2C9;border-radius:50%}
+.prog-unificada::after{content:"";position:absolute;inset:27px;border-radius:50%;background:var(--ink)}
+.prog-logo-original{display:block;width:152px;height:152px;object-fit:contain}
+.prog-clareza{position:relative;width:84px;height:84px;border-radius:50%;background:radial-gradient(circle,#DD033F 0 8%,rgba(221,3,63,.58) 9%,rgba(221,3,63,.18) 39%,rgba(221,3,63,0) 70%)}
+.prog-lider{font-size:clamp(18px,1.7vw,23px)!important;line-height:1.05!important;letter-spacing:-.02em;color:var(--ink)!important;font-weight:600!important;overflow-wrap:anywhere}
+.prog-lider-final::after{content:".";color:var(--red)}
+.progressao-hint{display:none;margin:12px 0 0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+.progressao-fecho{max-width:940px;margin:54px auto 0;text-align:center;font-size:clamp(22px,3vw,34px);font-weight:500;line-height:1.3;letter-spacing:-.02em}
+.progressao-fecho .serif{font-weight:300}
+@media(max-width:760px){
+  .progressao-wrap{margin-top:50px}
+  .progressao-faixa{height:auto;padding:16px 0;line-height:1.5}
+  .progressao{min-width:940px}
+  .progressao col:first-child{width:108px}
+  .progressao thead th{padding-left:18px;padding-right:18px}
+  .progressao tbody th{padding-left:12px;padding-right:10px;font-size:8.5px;letter-spacing:.12em}
+  .progressao tbody td{padding-left:18px;padding-right:18px}
+  .progressao-hint{display:block}
+  .progressao-fecho{text-align:left;margin-top:42px}
+}
 
 /* DEMO */
 .demo{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -128,29 +183,6 @@ nav .btn:hover{background:var(--red)}
 .chat .a .src::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:8px;vertical-align:1px}
 .demo .note{max-width:760px;margin:26px auto 0;text-align:center;color:var(--gray);font-size:15.5px}
 
-/* USOS — compreender/decidir/executar */
-.usos .lista{margin-top:60px}
-.uso{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:38px 0;border-top:1px solid var(--line)}
-@media(max-width:760px){.uso{grid-template-columns:1fr;gap:8px}}
-.uso .tag{font-size:12.5px;letter-spacing:.22em;font-weight:700;color:var(--red);padding-top:6px}
-.uso blockquote{font-weight:300;font-size:clamp(20px,2.6vw,27px);line-height:1.3;margin-bottom:10px}
-.uso p{color:#4A4A54;max-width:640px}
-
-/* MÉTODO */
-.metodo{background:var(--ink);color:#fff}
-.metodo .kicker{color:#fff}
-.metodo p.lead{color:#B9B9C2}
-.passos{margin-top:60px}
-.passo{display:grid;grid-template-columns:120px 240px 1fr;gap:26px;padding:30px 0;border-top:1px solid var(--line-dark);align-items:baseline}
-@media(max-width:820px){.passo{grid-template-columns:60px 1fr;grid-template-rows:auto auto}.passo p{grid-column:2}}
-.passo .n{font-size:14px;font-weight:700;color:var(--red);letter-spacing:.2em}
-.passo h3{font-size:21px;font-weight:600}
-.passo p{color:#B9B9C2;font-size:15.5px}
-.metodo .engenharia{margin-top:70px;padding-top:40px;border-top:1px solid var(--line-dark);max-width:820px}
-.metodo .engenharia h3{font-size:clamp(21px,2.6vw,27px);margin-bottom:14px}
-
-.metodo .engenharia p{color:#B9B9C2}
-
 /* SEGURANÇA */
 .conf-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:56px;border-top:1px solid var(--line)}
 @media(max-width:900px){.conf-grid{grid-template-columns:1fr}}
@@ -164,26 +196,13 @@ details{border-bottom:1px solid var(--line);padding:26px 0}
 summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";color:var(--red);font-size:28px;font-weight:300;flex-shrink:0}
-details[open] summary::after{content:"–"}
+details[open] summary::after{content:"-"}
 details p{margin-top:16px;color:#4A4A54;max-width:840px}
-
-/* IMPLANTAÇÃO */
-.impl .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;border-top:1px solid var(--line)}
-@media(max-width:860px){.impl .timeline{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.impl .timeline{grid-template-columns:1fr}}
-.t-item{padding:32px 28px 32px 0;border-right:1px solid var(--line)}
-.t-item:last-child{border-right:none}
-@media(max-width:860px){.t-item{border-right:none;border-bottom:1px solid var(--line)}}
-.t-item .n{color:var(--red);font-weight:700;font-size:12.5px;letter-spacing:.2em}
-.t-item h3{font-size:19px;margin:12px 0 8px;font-weight:600}
-.t-item p{font-size:14.5px;color:#4A4A54}
-.impl .frase{margin-top:56px;font-size:clamp(20px,2.6vw,28px);font-weight:500}
-.impl .frase .serif{color:var(--red)}
 
 /* CTA FINAL */
 .final{background:var(--ink);color:#fff;text-align:center;padding:130px 0}
 .final img{height:72px;margin-bottom:36px}
-.final h2{font-size:clamp(32px,5vw,58px);max-width:900px;margin:0 auto 22px}
+.final h2{font-size:22px;letter-spacing:0;line-height:1.6;font-weight:600;max-width:760px;margin:0 auto 40px}
 .final h2 .serif{font-weight:300}
 .final p{color:#B9B9C2;max-width:620px;margin:0 auto 44px;font-size:18px}
 .final .cta-row{justify-content:center}
@@ -197,6 +216,159 @@ details p{margin-top:16px;color:#4A4A54;max-width:840px}
 .contato input,.contato textarea{width:100%;padding:15px 17px;border:1px solid var(--line);border-radius:6px;font:inherit;font-size:15px;background:#fff}
 .contato textarea{grid-column:1/-1;min-height:110px;resize:vertical}
 .contato button{grid-column:1/-1;justify-self:start;border:none;cursor:pointer}
+
+/* NORTON DEMO - iPhone no hero */
+.hero .wrap{position:relative}
+.nphone{position:absolute;left:668px;right:0;margin:0 auto;width:380px;top:-83px;z-index:5;display:none}
+@media(min-width:1150px){
+  .nphone{display:block}
+  .hero h1{font-size:clamp(40px,4.8vw,68px);max-width:700px}
+  .hero .sub{max-width:620px}
+  .hero .kicker{max-width:700px;font-size:clamp(26px,3.4vw,44px)}
+  .hero{padding-top:112px}
+  .hero-copy{min-height:648px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start} /* distribuição vertical original do texto */
+  .hero-copy .kicker,.hero-copy h1,.hero-copy .sub{margin-top:0;margin-bottom:0}
+  .hero .abertura{margin-top:256px} /* folga sob o iPhone grande */
+}
+@media(min-width:1650px){
+  /* selo institucional ancorado ao iPhone (vão fixo), escala com a tela e centra no eixo do aparelho */
+  .hero-mark{display:block;left:calc(50% + 604px);right:auto;top:436px;transform:translateY(-50%);width:clamp(190px,calc(50vw - 624px),300px)}
+}
+.nphone-frame{width:380px;height:814px;border-radius:58px;background:#1A1A1C;padding:4px;box-shadow:0 50px 100px -30px rgba(11,11,18,.45),0 0 0 1.5px #3a3a3e}
+.nscreen{width:430px;height:932px;transform:scale(0.8651);transform-origin:top left;border-radius:64px;overflow:hidden;position:relative;background:#FBFAF9;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Inter,system-ui,sans-serif}
+.nphone-cap{text-align:center;font-size:11.5px;color:#84848D;margin-top:12px;letter-spacing:.04em}
+.nstatus{position:absolute;top:0;left:0;width:430px;height:54px;display:flex;align-items:flex-start;justify-content:space-between;padding:18px 26px 0;box-sizing:border-box;z-index:30}
+.nstatus .ntime{font-size:17px;font-weight:600;color:#1F1E1C;letter-spacing:.3px}
+.nisland{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:116px;height:32px;background:#000;border-radius:20px}
+.nsig{display:flex;align-items:center;gap:7px}
+.nheader{position:absolute;top:54px;left:0;width:430px;height:50px;display:flex;align-items:center;justify-content:center;z-index:20;background:rgba(251,250,249,.86);backdrop-filter:blur(12px)}
+.nheader .ntitle{display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#1F1E1C;letter-spacing:-.3px;white-space:nowrap}
+.nheader .nmenu{position:absolute;left:16px}.nheader .nedit{position:absolute;right:16px}
+.nchat{position:absolute;top:104px;left:0;width:430px;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 34px);mask-image:linear-gradient(to bottom,transparent 0,#000 34px)}
+.nchat-inner{position:absolute;bottom:0;left:0;width:430px;padding:16px 20px;box-sizing:border-box}
+.nbubble{display:none;justify-content:flex-end;margin-bottom:22px}
+.nbubble>div{max-width:82%;background:#EDEBE6;color:#1F1E1C;border-radius:20px;border-bottom-right-radius:7px;padding:11px 15px;font-size:16.5px;line-height:1.42;letter-spacing:-.01em}
+.nthink{display:none;align-items:center;gap:9px;font-size:16px;font-weight:500}
+.nthink .nshim{background-image:linear-gradient(90deg,#8B877E 0%,#8B877E 35%,#2A2925 50%,#8B877E 65%,#8B877E 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.01em}
+.nresp{display:none;flex-direction:column;gap:13px}
+.nresp p,.nresp .nbul{margin:0;font-size:16.5px;line-height:1.5;color:#1F1E1C;letter-spacing:-.01em;white-space:pre-wrap}
+.nresp .nbul{display:flex;gap:10px}.nresp .nbul .bd{color:#8B877E}
+.nresp .nh{font-size:18px;font-weight:700;color:#1F1E1C;letter-spacing:-.02em;margin-top:2px}
+.nresp .ntblw{border:1px solid #E4E1DA;border-radius:12px;overflow:hidden;background:#fff}
+.nresp table{width:100%;border-collapse:collapse;table-layout:fixed}
+.nresp th{background:#F4F2EE;font-weight:600;color:#5F5C55;font-size:12.5px;letter-spacing:.02em;text-align:left;padding:9px 11px}
+.nresp td{padding:9px 11px;font-size:14px;line-height:1.4;vertical-align:top;border-top:1px solid #E4E1DA}
+.nresp td.cn{font-weight:600;color:#1F1E1C;width:38%}.nresp td.cd{color:#5F5C55}
+.nresp .ndot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:2px;transform:translateY(1px)}
+.ncur{display:inline-block;width:2px;height:1.02em;margin-left:1px;transform:translateY(2px);border-radius:1px;background:#C96442;vertical-align:text-bottom}
+.ninput{position:absolute;left:0;bottom:300px;width:430px;padding:7px 12px 9px;box-sizing:border-box;z-index:15;background:#FBFAF9}
+.ninput-box{display:flex;align-items:flex-end;gap:9px;border:1px solid #E9E6E0;background:#fff;border-radius:24px;padding:7px 7px 7px 6px;box-shadow:0 1px 2px rgba(0,0,0,.03);min-height:58px;box-sizing:border-box}
+.ninput .nplus{width:34px;height:34px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#5F5C55;font-size:24px;font-weight:300}
+.ninput .nfield{flex:1;align-self:center;font-size:16.5px;line-height:1.34;color:#8B877E;white-space:pre-wrap;word-break:break-word;padding:2px 0;letter-spacing:-.01em}
+.ninput .nfield.hastext{color:#1F1E1C}
+.ninput .nsend{width:34px;height:34px;border-radius:50%;flex-shrink:0;align-self:flex-end;display:flex;align-items:center;justify-content:center;color:#5F5C55;font-size:18px}
+.ninput .nsend.active{background:#C96442;color:#fff;font-weight:700}
+.nkb{position:absolute;left:0;bottom:0;width:430px;height:300px;background:#D2D5DB;padding:8px 3px 0;box-sizing:border-box;z-index:25;display:flex;flex-direction:column;gap:11px}
+.nkb .krow{display:flex;gap:6px;justify-content:center}
+.nkb .k{flex:1;height:42px;border-radius:5px;background:#fff;color:#1C1C1E;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:400;box-shadow:0 1px 0 rgba(0,0,0,.28);min-width:0}
+.nkb .k.sp{background:#ABB0BA;font-size:15px}
+.nkb .k.pressed{background:#BFC4CC;transform:scale(.94)}
+.nhome{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:138px;height:5px;border-radius:3px;background:#1F1E1C;opacity:.32;z-index:40;display:none}
+
+/* JANELA DE IA (demonstração) */
+.janela-ia{max-width:880px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(11,11,18,.3)}
+.janela-barra{display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid var(--line)}
+.janela-barra .tl{width:12px;height:12px;border-radius:50%}
+.janela-barra .tl:nth-child(1){background:#FF5F57}.janela-barra .tl:nth-child(2){background:#FEBC2E}.janela-barra .tl:nth-child(3){background:#28C840}
+.janela-titulo{flex:1;text-align:center;font-size:13px;color:#84848D}
+.janela-conexao{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#4A4A52;border:1px solid var(--line);border-radius:999px;padding:4px 12px;white-space:nowrap}
+.janela-conexao svg{width:14px;height:14px;flex-shrink:0}
+.janela-ia .chat{border:none;box-shadow:none;border-radius:0;margin-top:0}
+.janela-legenda{margin-top:16px;font-size:13px;color:#84848D}
+@media(max-width:560px){.janela-titulo{display:none}.janela-conexao{margin-left:auto}}
+
+.demo h2 em{font-style:italic;font-weight:300}
+
+.roi{padding:96px 0;border-top:1px solid var(--line)}
+.roi .serif{font-weight:300}
+.roi .lead{max-width:840px}
+
+.poder{border-top:1px solid var(--line)}
+.poder .caps{margin-top:56px}
+.poder .caps p{display:flex;align-items:baseline;gap:26px;padding:26px 0;border-top:1px solid var(--line);font-size:clamp(21px,2.7vw,30px);font-weight:300;letter-spacing:-.015em}
+.poder .caps p strong{font-weight:600}
+.poder .caps .n{font-size:13px;font-weight:700;color:var(--red);letter-spacing:.2em;flex:0 0 auto}
+
+/* PROVAS */
+.provas a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.prova-doc{margin-top:52px;background:#F3F0E9;color:var(--ink);border:1px solid #D3CFC7;border-radius:4px;overflow:hidden;box-shadow:0 30px 70px -46px rgba(11,11,18,.42)}
+.doc-topo{min-height:54px;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid #D3CFC7;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#777780}
+.doc-selo{color:var(--red);font-weight:700}
+.doc-grid{display:block}
+.doc-bloco{padding:28px 0 32px;border-top:1px solid #C9C5BD;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.doc-bloco:first-child{border-top:0;padding-top:38px}
+.reveal.show .doc-bloco{opacity:1;transform:none}
+.reveal.show .doc-bloco:nth-of-type(2){transition-delay:.12s}
+.reveal.show .doc-bloco:nth-of-type(3){transition-delay:.24s}
+.reveal.show .doc-bloco:nth-of-type(4){transition-delay:.36s}
+.doc-bloco .n{display:block;color:var(--red);font-size:10px;font-weight:700;letter-spacing:.2em;margin-bottom:12px}
+.doc-trecho{font-size:clamp(20px,3vw,34px);line-height:1.34;margin:0;font-weight:500;max-width:920px}
+.doc-trecho+.doc-trecho{margin-top:10px}
+.doc-trecho mark{background:linear-gradient(transparent 60%,rgba(221,3,63,.18) 60%) no-repeat;color:inherit;padding:0 2px;background-size:0 100%;transition:background-size .8s .35s ease}
+.reveal.show .doc-trecho mark{background-size:100% 100%}
+.doc-contexto{margin-top:13px;color:#6B6B73;font-size:14px;line-height:1.6;max-width:760px}
+.doc-recortes{padding:0 56px 20px;background:#F3F0E9}
+.doc-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:21px 56px;border-top:1px solid #C9C5BD;background:#F3F0E9;color:var(--ink)!important;text-decoration:none!important;font-size:13px;font-weight:600;letter-spacing:.01em}
+.doc-link:hover{color:var(--red)!important}
+.doc-nota{padding:13px 22px;background:#E9E5DE;color:#777780;font-size:11.5px;line-height:1.5}
+.casos-reais{margin-top:104px}
+.casos-reais-cabecalho{max-width:880px}
+.casos-reais-cabecalho h3{font-size:clamp(30px,4.2vw,50px);font-weight:600;letter-spacing:-.025em;line-height:1.1;margin-top:18px}
+.casos-reais-cabecalho h3 span{display:block;font-weight:300}
+.casos-reais-cabecalho p{margin-top:24px;font-size:clamp(17px,2vw,20px);line-height:1.65;color:#4A4A54;max-width:820px}
+.casos-kicker{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.casos-lista{margin-top:66px;border-top:1px solid var(--ink)}
+.caso-real{display:grid;grid-template-columns:190px 1fr;gap:44px;padding:58px 0 64px;border-bottom:1px solid var(--line)}
+.caso-indice{font-size:11px;font-weight:700;letter-spacing:.17em;line-height:1.5;color:var(--red);text-transform:uppercase}
+.caso-indice b{display:block;margin-bottom:11px;font-size:42px;font-weight:300;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.caso-indice img{display:block;width:150px;height:150px;object-fit:cover;border-radius:50%;margin-top:22px;filter:saturate(.85)}
+.caso-conteudo h4{font-size:clamp(25px,3.2vw,39px);line-height:1.22;letter-spacing:-.025em;font-weight:600;max-width:840px}
+.caso-conteudo h4 mark{background:linear-gradient(transparent 60%,rgba(221,3,63,.18) 60%);color:inherit;padding:0 2px}
+.caso-relato{margin-top:26px;max-width:780px}
+.caso-relato p{font-size:16.5px;line-height:1.75;color:#3E3E48}
+.caso-relato p+p{margin-top:14px}
+.caso-contexto{margin-top:28px;font-size:12.5px;letter-spacing:.04em;color:#84848D}
+.caso-relato details{border:0;padding:0}
+.caso-relato summary{display:inline-flex;margin-top:14px;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase}
+.caso-relato summary::after{content:" +";font-size:14px}
+.caso-relato details[open] summary{display:none}
+.caso-relato details p:first-of-type{margin-top:14px}
+.casos-nota{margin-top:24px;font-size:12.5px;color:#84848D}
+
+/* MANIFESTO */
+.manifesto{background:var(--ink);color:#fff}
+.manifesto .wrap{text-align:center}
+.manifesto .kicker{color:#fff}
+.manifesto h2{max-width:900px;margin:0 auto 10px}
+.manifesto h2 .serif{font-weight:300}
+.manifesto .frases{margin:40px auto 0;max-width:600px}
+.manifesto .frases p{font-size:17.5px;font-weight:300;line-height:1.85;color:#D6D6DC}
+.manifesto .frases p+p{margin-top:22px}
+.manifesto .frases strong{font-weight:600;color:#fff}
+.manifesto .frases .veredito{font-weight:600;color:#fff;font-size:20px;margin-top:30px}
+.manifesto .veredito em{font-style:normal;color:var(--red)}
+.manifesto .quemfaz{margin:52px auto 0;padding-top:30px;border-top:1px solid var(--line-dark);max-width:600px;font-size:15px;line-height:1.8;color:#B9B9C2}
+.manifesto .bfb{margin-top:60px;font-size:clamp(20px,2.6vw,30px);font-weight:700;letter-spacing:.5em;text-transform:uppercase;color:#fff}
+.manifesto .bfb::after{content:".";color:var(--red)}
+.demo-fecho{margin-top:44px;margin-bottom:0}
+.provas .fecho-prova{margin-top:36px;font-size:clamp(19px,2.3vw,25px);font-weight:300;line-height:1.4;max-width:900px;letter-spacing:-.01em}
+.provas .fecho-prova b{font-weight:600}
+@media(max-width:800px){
+  .doc-recortes{padding:0 22px 10px}.doc-link{padding:19px 22px}.doc-topo{align-items:flex-start;flex-direction:column;gap:5px}
+  .casos-reais{margin-top:78px}.caso-real{grid-template-columns:1fr;gap:22px;padding:44px 0 50px}.caso-indice b{display:inline;margin:0 10px 0 0;font-size:28px}
+  .caso-indice img{width:104px;height:104px;margin-top:14px}
+    }
+@media(prefers-reduced-motion:reduce){.doc-bloco,.doc-trecho mark{transition:none}}
 
 footer{border-top:1px solid var(--line);padding:44px 0;color:var(--gray);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
@@ -215,35 +387,90 @@ footer img{height:48px;opacity:.95}
 
 <nav>
   <div class="wrap">
-    <a class="logo" href="#"><img src="assets/openbi-logo.svg" alt="OpenBI — Intelligence finally open"></a>
+    <a class="logo" href="#"><img src="assets/openbi-logo.svg" alt="OpenBI - Intelligence finally open"></a>
     <div class="links">
       <a href="#problema">O problema</a>
       <a href="#transformacao">A transformação</a>
       <a href="#demo">Demonstração</a>
-      <a href="#implantacao">Implantação</a>
       <a class="btn" href="#agendar">Agendar call<span class="btn-ext"> de 15 minutos</span></a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="halo" aria-hidden="true"></div>
+  <div class="hero-mark" aria-hidden="true">
+    <img src="assets/openbi-symbol.svg" alt="">
+    <span>INTELLIGENCE FINALLY OPEN</span>
+  </div>
   <div class="wrap">
-    <span class="kicker">E se a sua empresa <b>falasse?</b></span>
-    <p class="sub">A OpenBI transforma sistemas, dados e processos fragmentados em uma única camada de inteligência, substituindo dezenas de interfaces desconexas por uma única conversa com IA.</p>
-    <h1>Sua empresa inteira.<br><span class="serif">Finalmente ao alcance</span> de uma conversa.</h1>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#agendar">Agendar call de 15 minutos</a>
-      <a class="btn btn-ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <div class="hero-copy">
+      <span class="kicker">E se a sua empresa <b>falasse?</b></span>
+      <h1>Você pergunta.<br><span class="serif">A empresa responde.</span></h1>
+      <div class="sub">
+        <p>Hoje, entre uma pergunta e uma decisão existem pessoas, sistemas e dias de espera.</p>
+        <p>A OpenBI transforma toda a informação dispersa da empresa em uma <strong>camada única de inteligência</strong> - que te responde <em>tudo</em>.</p>
+        <p>Para você decidir em minutos, enxergar tudo o que queria - <em>e até o que não queria</em> - e <strong>voltar a pensar no futuro</strong>.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#agendar">Quero aplicar</a>
+        <a class="btn btn-ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="nphone" aria-hidden="true">
+      <div class="nphone-frame">
+        <div class="nscreen">
+          <div class="nstatus">
+            <span class="ntime">9:41</span>
+            <div class="nisland"></div>
+            <div class="nsig">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="#1F1E1C"><rect x="0" y="9" width="3.6" height="5" rx="1"/><rect x="5.4" y="6.3" width="3.6" height="7.7" rx="1"/><rect x="10.8" y="3.6" width="3.6" height="10.4" rx="1"/><rect x="16.2" y="0.9" width="3.6" height="13.1" rx="1"/></svg>
+              <svg width="20" height="14" viewBox="0 0 17 12" fill="#1F1E1C"><path d="M8.5 2C5.5 2 2.8 3.1.8 5l1.4 1.4C3.9 4.8 6.1 3.9 8.5 3.9s4.6.9 6.3 2.5L16.2 5C14.2 3.1 11.5 2 8.5 2zm0 3.6c-1.8 0-3.4.7-4.6 1.8l1.4 1.4c.9-.8 2-1.3 3.2-1.3s2.3.5 3.2 1.3l1.4-1.4C11.9 6.3 10.3 5.6 8.5 5.6zm0 3.5c-.7 0-1.4.3-1.9.8l1.9 1.9 1.9-1.9c-.5-.5-1.2-.8-1.9-.8z"/></svg>
+              <svg width="30" height="14" viewBox="0 0 30 14" fill="none"><rect x="0.6" y="1.6" width="25" height="11" rx="3.5" stroke="#1F1E1C" stroke-width="1.2" opacity=".9"/><rect x="2.5" y="3.5" width="17" height="7.2" rx="1.5" fill="#1F1E1C"/><rect x="27" y="4.8" width="1.8" height="4.6" rx="1" fill="#1F1E1C" opacity=".7"/></svg>
+            </div>
+          </div>
+          <div class="nheader">
+            <svg class="nmenu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F1E1C" stroke-width="1.9" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <div class="ntitle">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="#C96442"><path d="M12 0c.6 5.2 1.6 6.2 6.8 6.8v.9C13.6 8.3 12.6 9.3 12 14.5c-.6-5.2-1.6-6.2-6.8-6.8v-.9C10.4 6.2 11.4 5.2 12 0z"/><path d="M19 13c.35 2.8.9 3.4 3.7 3.7v.5C19.9 17.6 19.35 18.2 19 21c-.35-2.8-.9-3.4-3.7-3.7v-.5C18.1 16.4 18.65 15.8 19 13z"/></svg>
+              <span>Seu negócio conversável</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8B877E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <svg class="nedit" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F1E1C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a3 3 0 0 1 3-3h5"/><path d="M20 12v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-2"/><path d="M15.5 4.5a2 2 0 0 1 3 3L12 14l-3.5.8.8-3.5z"/></svg>
+          </div>
+          <div class="nchat" id="nchat"><div class="nchat-inner" id="nchatInner">
+            <div class="nbubble" id="nbubble"><div id="nbubbleTxt"></div></div>
+            <div class="nthink" id="nthink">
+              <svg id="nthinkSpark" width="17" height="17" viewBox="0 0 24 24" fill="#C96442"><path d="M12 0c.6 5.2 1.6 6.2 6.8 6.8v.9C13.6 8.3 12.6 9.3 12 14.5c-.6-5.2-1.6-6.2-6.8-6.8v-.9C10.4 6.2 11.4 5.2 12 0z"/><path d="M19 13c.35 2.8.9 3.4 3.7 3.7v.5C19.9 17.6 19.35 18.2 19 21c-.35-2.8-.9-3.4-3.7-3.7v-.5C18.1 16.4 18.65 15.8 19 13z"/></svg>
+              <span class="nshim" id="nshimTxt">Consultando ERP, CRM, Financeiro e Produção…</span>
+            </div>
+            <div class="nresp" id="nresp"></div>
+          </div></div>
+          <div class="ninput" id="ninput"><div class="ninput-box">
+            <span class="nplus">+</span>
+            <span class="nfield" id="nfield">Mensagem</span>
+            <span class="nsend" id="nsend">↑</span>
+          </div></div>
+          <div class="nkb" id="nkb"></div>
+          <div class="nhome" id="nhome"></div>
+        </div>
+      </div>
+      <p class="nphone-cap">Simulação - dados ilustrativos</p>
     </div>
     <div class="abertura reveal">
-      <p class="lead">A OpenBI não substitui seu ERP, CRM ou BI. Ela cria uma camada cognitiva acima do que já existe — que entende contexto, respeita permissões e coordena tudo por linguagem natural.</p>
+      <div class="alead">
+        <p>A OpenBI não substitui seu ERP, CRM ou BI.</p>
+        <p>Ela centraliza e organiza o que importa,<br>criando uma camada de inteligência acima do que já existe</p>
+        <p>- e essa camada vira contexto para sua IA <br>responder com o <strong><em>conhecimento real</em></strong> do seu negócio.</p>
+      </div>
       <div class="opening">
         <svg viewBox="0 0 900 210" class="svgt" aria-label="A abertura: de fragmentado e fechado, para unificado, visível, conversável">
           <defs>
             <radialGradient id="clarityGlowHero" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#DD033F" stop-opacity=".9"/>
-              <stop offset="55%" stop-color="#DD033F" stop-opacity=".35"/>
+              <stop offset="0%" stop-color="#DD033F" stop-opacity="1"/>
+              <stop offset="8%" stop-color="#DD033F" stop-opacity="1"/>
+              <stop offset="9%" stop-color="#DD033F" stop-opacity=".58"/>
+              <stop offset="39%" stop-color="#DD033F" stop-opacity=".18"/>
+              <stop offset="70%" stop-color="#DD033F" stop-opacity="0"/>
               <stop offset="100%" stop-color="#DD033F" stop-opacity="0"/>
             </radialGradient>
           </defs>
@@ -265,7 +492,7 @@ footer img{height:48px;opacity:.95}
           </g>
           <text x="575" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">ACESSO ABERTO</text>
           <path d="M675 92 h44 m-9 -6 9 6 -9 6" stroke="#C2C2C9" fill="none" stroke-width="1.5"/>
-          <circle cx="805" cy="92" r="44" fill="url(#clarityGlowHero)"/>
+          <circle cx="805" cy="92" r="42" fill="url(#clarityGlowHero)"/>
           <text x="805" y="188" font-size="11.5" fill="#84848D" text-anchor="middle" letter-spacing="2.5">CLAREZA</text>
         </svg>
       </div>
@@ -282,40 +509,41 @@ footer img{height:48px;opacity:.95}
 <section class="problema" id="problema">
   <div class="wrap reveal">
     <span class="kicker">O problema real</span>
-    <p class="abre">Toda empresa cresce adicionando sistemas.<br>Cada um resolve um problema específico.<br>Nenhum resolve a empresa como um todo.<br><br>O sistema mais integrado ainda é<br><span class="serif destaque">a cabeça do líder.</span></p>
-    <p class="lead" style="margin-top:26px">Mesmo longe, você continua sendo quem conecta as áreas, encontra o contexto e resolve as divergências que a operação não consegue explicar sozinha.</p>
+    <h2>O sistema mais integrado ainda é<br><span class="serif">a cabeça do líder.</span></h2>
+    <p class="lead">Mesmo longe, você continua sendo quem junta as peças que cada área traz - e quem espera por elas para decidir.</p>
+    <p class="abre" style="margin-top:72px">Toda empresa cresce adicionando sistemas.<br>Cada um resolve um problema específico.<br>Nenhum resolve a empresa como um todo.</p>
 
     <div class="gatilhos">
       <div class="gatilho">
         <div class="num">01</div>
-        <h3>O dia acaba e a sensação é de que você <em>procurou</em> mais do que <em>decidiu</em>.</h3>
+        <h3>O dia acaba e a sensação é de que você <em>esperou</em> mais do que <em>decidiu</em>.</h3>
         <div class="rec">
           <p>Pedir o relatório e esperar dois dias.</p>
-          <p>Abrir cinco sistemas para responder uma pergunta.</p>
-          <p>Conciliar planilhas que nunca batem de primeira.</p>
+          <p>Receber a resposta no recorte que alguém escolheu.</p>
+          <p>Decidir com o que chega, quando chega.</p>
         </div>
       </div>
       <div class="gatilho">
         <div class="num">02</div>
-        <h3>Cada área trabalha com uma <em>versão diferente</em> da realidade.</h3>
+        <h3>Você precisa acessar <em>múltiplos departamentos</em>.</h3>
         <div class="rec">
-          <p>O número do comercial não é o número do financeiro.</p>
+          <p>Cada área trabalha com uma versão diferente da realidade. O número do comercial não é o número do financeiro.</p>
           <p>Metade da reunião é gasta discutindo qual dado está certo.</p>
           <p>O conhecimento crítico mora na cabeça de duas ou três pessoas.</p>
         </div>
       </div>
       <div class="gatilho">
         <div class="num">03</div>
-        <h3>A decisão está pronta na sua cabeça. <em>A informação é que não chega.</em></h3>
+        <h3>Você até tem informação e faz o que precisa ser feito. <em>Mas com a sensação de que mais contexto te deixaria mais seguro.</em></h3>
         <div class="rec">
           <p>Perguntas simples viram projetos.</p>
           <p>Quando o dado consolida, a oportunidade já passou.</p>
-          <p>Na dúvida, decide-se pela intuição — e reza-se.</p>
+          <p>Na dúvida, decide-se pela intuição - e reza-se.</p>
         </div>
       </div>
       <div class="gatilho">
         <div class="num">04</div>
-        <h3>Crescer virou sinônimo de <em>complicar</em>.</h3>
+        <h3>Crescer é sinônimo de <em>complicar</em>.</h3>
         <div class="rec">
           <p>Cada cliente novo, mais um sistema, mais uma planilha, mais um controle.</p>
           <p>A operação escala; a visibilidade não acompanha.</p>
@@ -326,9 +554,10 @@ footer img{height:48px;opacity:.95}
         <div class="num">05</div>
         <h3>E no fim, a empresa inteira roda na sua cabeça. <em>Sobra pouco espaço para pensar grande.</em></h3>
         <div class="rec">
-          <p>Longe do escritório, a visibilidade some — e o celular não para.</p>
-          <p>O fim de semana termina com a planilha aberta.</p>
-          <p>A empresa funciona — mas às custas da sua atenção permanente.</p>
+          <p>Longe do escritório, a visibilidade some - e o celular não para.</p>
+          <p>O fim de semana acaba esperando o número que só chega na segunda.</p>
+          <p>A empresa funciona - mas às custas da sua atenção permanente.</p>
+          <p>Você faz mais microgerenciamento do que gostaria.</p>
         </div>
       </div>
     </div>
@@ -337,10 +566,18 @@ footer img{height:48px;opacity:.95}
   </div>
 </section>
 
+<section class="roi">
+  <div class="wrap reveal">
+    <h2><span class="serif">Todo investimento que você já fez em software na vida</span><br>nunca retornou o maior ROI possível.</h2>
+    <p class="lead">Sem um centralizador que retire os dados do sistema, armazene em sua propriedade e trabalhe esses dados, você nunca utilizou o potencial máximo de <strong>nenhum software</strong>.</p>
+  </div>
+</section>
+
 <section class="transf" id="transformacao">
   <div class="wrap reveal">
     <span class="kicker" style="color:#fff">A transformação</span>
-    <h2>Do caos de softwares<br><span class="serif">a um único organismo inteligente.</span></h2>
+    <h2>Todos os seus sistemas, finalmente<br><span class="serif">um único organismo <strong><em>inteligente</em></strong>.</span></h2>
+    <p class="lead">Sistema não é só ERP e CRM: é tudo aquilo que gera dados.<br>Seu canal no YouTube é um sistema. Sua conta no Instagram é um sistema.<br>Saiba tudo o que o seu cliente busca, o que ele assiste - sem se limitar aos insights da plataforma.</p>
     <div class="ba-grid">
       <div class="ba antes">
         <header><span>ANTES</span><span>SISTEMAS ISOLADOS</span></header>
@@ -355,7 +592,7 @@ footer img{height:48px;opacity:.95}
           <!-- ERP -->
           <g transform="translate(28,40) rotate(-2 105 60)" filter="url(#cardShadow)">
             <rect width="210" height="120" fill="#FFFFFF"/>
-            <text x="18" y="28" font-size="11" fill="#84848D" letter-spacing="1.5" font-weight="600">ERP — MÓDULO 7 DE 12</text>
+            <text x="18" y="28" font-size="11" fill="#84848D" letter-spacing="1.5" font-weight="600">ERP - MÓDULO 7 DE 12</text>
             <circle cx="192" cy="24" r="9" fill="#DD033F"/><text x="188.5" y="28" font-size="10" fill="#fff">9</text>
             <g fill="#EDEDF0">
               <rect x="18" y="44" width="174" height="10"/><rect x="18" y="60" width="174" height="10"/>
@@ -366,7 +603,7 @@ footer img{height:48px;opacity:.95}
           <!-- dashboard -->
           <g transform="translate(318,30) rotate(1.5 110 60)" filter="url(#cardShadow)">
             <rect width="220" height="120" fill="#FFFFFF"/>
-            <text x="18" y="28" font-size="11" fill="#84848D" letter-spacing="1.5" font-weight="600">DASHBOARD v14 — HÁ 9 DIAS</text>
+            <text x="18" y="28" font-size="11" fill="#84848D" letter-spacing="1.5" font-weight="600">DASHBOARD v14 - HÁ 9 DIAS</text>
             <rect x="22" y="80" width="28" height="22" fill="#95959D"/>
             <rect x="58" y="62" width="28" height="40" fill="#95959D"/>
             <rect x="94" y="72" width="28" height="30" fill="#95959D"/>
@@ -394,7 +631,7 @@ footer img{height:48px;opacity:.95}
           <!-- reunião -->
           <g transform="translate(36,318) rotate(-1 105 45)" filter="url(#cardShadow)">
             <rect width="210" height="90" fill="#FFFFFF"/>
-            <text x="16" y="28" font-size="11" fill="#84848D" letter-spacing="1.5" font-weight="600">REUNIÃO — 1:42:18</text>
+            <text x="16" y="28" font-size="11" fill="#84848D" letter-spacing="1.5" font-weight="600">REUNIÃO - 1:42:18</text>
             <text x="16" y="54" font-size="12.5" fill="#1A1A22">Precisamos validar</text>
             <text x="16" y="72" font-size="12.5" fill="#1A1A22">com o financeiro.</text>
           </g>
@@ -421,201 +658,305 @@ footer img{height:48px;opacity:.95}
             <rect width="372" height="70" rx="14" fill="#FFFFFF"/>
             <circle cx="24" cy="28" r="7" fill="#DD033F"/>
             <text x="42" y="33" font-size="13" fill="#1A1A22" font-weight="600">R$ 2,3M, com folga a partir da 3ª semana.</text>
-            <text x="42" y="54" font-size="10.5" fill="#84848D">Fontes: Financeiro · ERP · CRM — consultadas agora</text>
+            <text x="42" y="54" font-size="10.5" fill="#84848D">Fontes: Financeiro · ERP · CRM - citadas na resposta</text>
           </g>
           <g transform="translate(216,200)" filter="url(#cardShadow)">
             <rect width="316" height="42" rx="21" fill="#1A1A22"/>
-            <text x="158" y="26" font-size="12.5" fill="#FFFFFF" text-anchor="middle">Então programa os pagamentos da semana.</text>
+            <text x="158" y="26" font-size="12.5" fill="#FFFFFF" text-anchor="middle">E se eu antecipar a compra de insumos?</text>
           </g>
           <g transform="translate(28,266)" filter="url(#cardShadow)">
             <rect width="392" height="70" rx="14" fill="#FFFFFF"/>
             <circle cx="24" cy="28" r="7" fill="#DD033F"/>
-            <text x="42" y="33" font-size="13" fill="#1A1A22" font-weight="600">Feito: 12 pagamentos agendados.</text>
-            <text x="42" y="54" font-size="10.5" fill="#84848D">Aprovação enviada ao financeiro · permissões respeitadas</text>
+            <text x="42" y="33" font-size="13" fill="#1A1A22" font-weight="600">Impacto de R$ 340 mil - o caixa segue positivo.</text>
+            <text x="42" y="54" font-size="10.5" fill="#84848D">Cenário modelado na hora · trade-offs por semana</text>
           </g>
           <!-- verbos, espelhando o antes -->
           <line x1="28" y1="424" x2="532" y2="424" stroke="#D4D4DA"/>
           <g font-size="11.5" fill="#4A4A52" letter-spacing="2" font-weight="600">
             <text x="28" y="452">PERGUNTAR</text>
-            <text x="188" y="452">ENTENDER</text>
-            <text x="330" y="452">DECIDIR</text>
-            <text x="460" y="452">AGIR</text>
+            <text x="182" y="452">ENXERGAR</text>
+            <text x="330" y="452">ENTENDER</text>
+            <text x="466" y="452">DECIDIR</text>
           </g>
         </svg>
       </div>
     </div>
-    <p class="frase">Sua empresa deixa de ser um conjunto de softwares<br>e passa a funcionar como <span class="serif">um único organismo inteligente.</span></p>
-  </div>
-</section>
-
-<section class="camada" id="camada">
-  <div class="wrap reveal">
-    <span class="kicker">A camada que faltava</span>
-    <h2>Os sistemas continuam existindo.<br><span class="serif">A complexidade deixa de chegar até você.</span></h2>
-    <p class="lead">A OpenBI não substitui seu ERP, CRM ou BI. Ela cria uma camada cognitiva acima do que já existe — que entende contexto, respeita permissões e coordena tudo por linguagem natural. Seu investimento anterior finalmente entrega o potencial completo.</p>
-    <div class="diagrama">
-      <svg viewBox="0 0 860 300" class="svgt" aria-label="Diagrama: uma conversa acima, camada OpenBI no meio, sistemas abaixo">
-        <g transform="translate(280,10)">
-          <rect width="300" height="46" rx="23" fill="#0B0B12"/>
-          <text x="150" y="28" font-size="14" fill="#fff" text-anchor="middle">Uma conversa</text>
-        </g>
-        <g stroke="#C2C2C9"><line x1="430" y1="56" x2="430" y2="92"/></g>
-        <g transform="translate(90,92)">
-          <rect width="680" height="86" rx="8" fill="none" stroke="#0B0B12" stroke-width="1.5"/>
-          <circle cx="34" cy="43" r="9" fill="#DD033F"/>
-          <text x="60" y="38" font-size="16" font-weight="600" fill="#0B0B12">Camada de Inteligência OpenBI</text>
-          <text x="60" y="62" font-size="12" fill="#6E6E78" letter-spacing="1.5">CONTEXTO · GOVERNANÇA · PERMISSÕES · MEMÓRIA · AUDITORIA</text>
-          <text x="620" y="50" font-size="11" fill="#6E6E78">ENTENDER · DECIDIR · AGIR</text>
-        </g>
-        <g stroke="#C2C2C9">
-          <line x1="160" y1="178" x2="160" y2="214"/><line x1="268" y1="178" x2="268" y2="214"/>
-          <line x1="376" y1="178" x2="376" y2="214"/><line x1="484" y1="178" x2="484" y2="214"/>
-          <line x1="592" y1="178" x2="592" y2="214"/><line x1="700" y1="178" x2="700" y2="214"/>
-        </g>
-        <g font-size="13" text-anchor="middle">
-          <g transform="translate(110,214)"><rect width="100" height="44" rx="6" fill="#fff" stroke="#E4E4E8"/><text x="50" y="27" fill="#0B0B12">ERP</text></g>
-          <g transform="translate(218,214)"><rect width="100" height="44" rx="6" fill="#fff" stroke="#E4E4E8"/><text x="50" y="27" fill="#0B0B12">CRM</text></g>
-          <g transform="translate(326,214)"><rect width="100" height="44" rx="6" fill="#fff" stroke="#E4E4E8"/><text x="50" y="27" fill="#0B0B12">Financeiro</text></g>
-          <g transform="translate(434,214)"><rect width="100" height="44" rx="6" fill="#fff" stroke="#E4E4E8"/><text x="50" y="27" fill="#0B0B12">RH</text></g>
-          <g transform="translate(542,214)"><rect width="100" height="44" rx="6" fill="#fff" stroke="#E4E4E8"/><text x="50" y="27" fill="#0B0B12">BI</text></g>
-          <g transform="translate(650,214)"><rect width="100" height="44" rx="6" fill="#fff" stroke="#E4E4E8"/><text x="50" y="27" fill="#0B0B12">Planilhas</text></g>
-        </g>
-      </svg>
-    </div>
-    <p class="nota">Não substituímos a infraestrutura. Abrimos o acesso à inteligência que ela já contém.</p>
   </div>
 </section>
 
 <section class="demo" id="demo">
   <div class="wrap reveal">
     <span class="kicker">Demonstração</span>
-    <h2>Pergunte. Entenda. <span class="serif">Decida.</span></h2>
-    <p class="lead">É assim que um diretor usa a OpenBI num dia normal:</p>
-    <div class="chat" id="chat" aria-live="polite">
-      <div class="msg q">Quais clientes estão atrasando pagamentos, têm contrato vencendo em 30 dias e ainda têm pedidos em produção?</div>
-      <div class="msg a"><b>7 clientes</b> nessa situação. Os três mais críticos: Alfa Ltda (R$ 182 mil em atraso, contrato vence em 12 dias, 2 pedidos em produção), Grupo Vetor e Comercial Rio. Quer que eu prepare um plano de cobrança priorizado?<span class="src">Fontes: ERP · CRM · Financeiro — consultadas agora</span></div>
-      <div class="msg q">Qual foi nossa conversão real de propostas neste trimestre?</div>
-      <div class="msg a">A conversão real foi <b>10% (2 de 20 propostas)</b> — não 2 de 30 como no relatório manual: 10 propostas estavam duplicadas na planilha do comercial. Recomendo revisar o processo de registro.<span class="src">Fontes: CRM · Planilha comercial — inconsistência detectada e explicada</span></div>
+    <h2><span class="serif">Se a IA já te impressiona com o pouco contexto que você passa,</span><br>imagina com o contexto da sua empresa inteira - <em>automatizado</em>.</h2>
+    <div class="janela-ia">
+      <div class="janela-barra">
+        <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+        <span class="janela-titulo">Seu assistente de IA</span>
+        <span class="janela-conexao"><svg viewBox="0 0 1000 1000" aria-hidden="true"><path d="M754.29 311.74 A318 318 0 1 0 754.29 688.26 L676.99 662.87 A242 242 0 1 1 676.99 337.13 Z" fill="#0B0B12"/><circle cx="740" cy="500" r="80" fill="#DD033F"/></svg> conectado à sua empresa</span>
+      </div>
+      <div class="chat" id="chat" aria-live="polite">
+        <div class="msg q">Minha conversão caiu para 12%. O que aconteceu?</div>
+        <div class="msg a">Um colaborador marcou <b>9 no-shows</b> como reuniões concluídas para não gerar tarefas atrasadas.</div>
+        <div class="msg a">Com as <b>32 reuniões reais</b>, sua conversão está dentro do padrão. O problema não está em Vendas. Está no registro.<span class="src">Fontes: CRM · Agenda · Data Lake</span></div>
+      </div>
     </div>
-    <p class="note">Nenhuma resposta é inventada: quando o dado não existe, a OpenBI diz que não existe — e mostra as fontes de cada resposta.</p>
+    <p class="janela-legenda">Simulação com caso de uso real de nosso cliente.</p>
+    <h2 class="demo-fecho">Contra dados, não há argumentos.<br><span class="serif">Confiança e tranquilidade em uma única fonte da verdade.</span></h2>
   </div>
 </section>
 
-<section class="usos">
+<section class="poder">
   <div class="wrap reveal">
-    <span class="kicker">Não é um chatbot corporativo</span>
-    <h2>Da pergunta à ação.<br><span class="serif">Com contexto e controle.</span></h2>
-    <div class="lista">
-      <div class="uso">
-        <div class="tag">01 / COMPREENDER</div>
-        <div>
-          <blockquote>“Por que a margem caiu na região Sul este mês?”</blockquote>
-          <p>A OpenBI cruza vendas, custos, estoque e operação para explicar o desvio a partir das fontes reais.</p>
-        </div>
-      </div>
-      <div class="uso">
-        <div class="tag">02 / DECIDIR</div>
-        <div>
-          <blockquote>“Quais três ações têm maior impacto no caixa dos próximos 60 dias?”</blockquote>
-          <p>A resposta considera o contexto completo, as restrições e as prioridades da empresa.</p>
-        </div>
-      </div>
-      <div class="uso">
-        <div class="tag">03 / EXECUTAR</div>
-        <div>
-          <blockquote>“Prepare o plano, distribua os responsáveis e acompanhe os prazos.”</blockquote>
-          <p>Ações acontecem apenas quando autorizadas — respeitando perfis, regras e permissões.</p>
-        </div>
-      </div>
+    <span class="kicker">Poder de decisão</span>
+    <h2>Você, de volta à <span class="serif">função original do líder.</span></h2>
+    <p class="lead">A empresa responde o resto. Ficam com você as únicas funções que sempre foram suas:</p>
+    <div class="caps">
+      <p><span class="n">01</span><strong>Decidir em minutos</strong> o que antes exigia dias.</p>
+      <p><span class="n">02</span><strong>Enxergar relações invisíveis</strong> entre informações.</p>
+      <p><span class="n">03</span><strong>Antecipar riscos</strong> antes do mercado.</p>
+      <p><span class="n">04</span><strong>Fazer perguntas</strong> que antes eram impossíveis.</p>
+      <p><span class="n">05</span><strong>Descobrir dinheiro e oportunidades</strong> escondidos.</p>
     </div>
+    <h2 class="demo-fecho">Um diretor disponível 24/7,<br><span class="serif">que nunca esquece um número.</span></h2>
   </div>
 </section>
 
-<section class="metodo" id="metodo">
+<section class="provas" id="provas">
   <div class="wrap reveal">
-    <span class="kicker" style="color:#fff">Como a transformação acontece</span>
-    <h2>Método C.O.N.T.A.</h2>
-    <p class="lead">Cinco etapas para transformar dados dispersos em inteligência acessível por conversa.</p>
-    <div class="passos">
-      <div class="passo"><div class="n">01 — C</div><h3>Conectar</h3><p>Integramos as fontes que explicam o negócio: ERP, CRM, financeiro, planilhas, documentos, sistemas legados.</p></div>
-      <div class="passo"><div class="n">02 — O</div><h3>Organizar</h3><p>Dados duplicados e conflitantes viram uma base única, consistente e confiável.</p></div>
-      <div class="passo"><div class="n">03 — N</div><h3>Nutrir</h3><p>Tudo passa a nutrir a camada de inteligência: o contexto completo da sua empresa para a IA.</p></div>
-      <div class="passo"><div class="n">04 — T</div><h3>Tornar acessível</h3><p>Qualquer gestor pergunta em linguagem natural. Sem SQL, sem filtros, sem depender de especialistas.</p></div>
-      <div class="passo"><div class="n">05 — A</div><h3>Acionar</h3><p>Resposta vira decisão — e, quando autorizado, vira ação: cobranças, propostas, ordens, tarefas.</p></div>
+    <span class="kicker">Prova documental</span>
+    <h2>O CEO do iFood colocou<br><span class="serif">a transformação em palavras.</span></h2>
+    <p class="lead">Em artigo público, Diego Barreto relata o que mudou quando passou a cruzar múltiplas fontes com um agente e descreve o acesso da liderança ao Data Lake.</p>
+    <div class="prova-doc">
+      <div class="doc-topo">
+        <span class="doc-selo">Arquivo público</span>
+        <span>Diego Barreto · CEO do iFood · 16 maio 2026</span>
+      </div>
+      <div class="doc-grid">
+        <div class="doc-recortes">
+          <div class="doc-bloco">
+            <span class="n">01 / VELOCIDADE</span>
+            <p class="doc-trecho">Uma análise feita <mark>“sozinho em 90 minutos”</mark></p>
+            <p class="doc-trecho">antes exigiria <mark>“uma semana de trabalho”</mark> e uma <mark>equipe dedicada</mark></p>
+            <p class="doc-contexto">Múltiplas fontes cruzadas, cenários modelados e uma recomendação clara entregue no mesmo dia.</p>
+          </div>
+          <div class="doc-bloco">
+            <span class="n">02 / QUALIDADE</span>
+            <p class="doc-trecho">Chega às reuniões com o <mark>“pensamento mais lapidado”</mark> e <mark>“perguntas mais precisas”</mark></p>
+            <p class="doc-contexto">As hipóteses são pressionadas pelo agente antes de consumir o tempo da equipe.</p>
+          </div>
+          <div class="doc-bloco">
+            <span class="n">03 / ALAVANCAGEM</span>
+            <p class="doc-trecho"><mark>“multiplica a própria entrega por um fator de 3 a 5”</mark></p>
+            <p class="doc-contexto">É o multiplicador de entrega individual relatado por Diego no uso aprofundado da IA.</p>
+          </div>
+        </div>
+      </div>
+      <a class="doc-link" href="https://diegocbarreto.substack.com/p/por-que-pedir-a-lideranca-senior" target="_blank" rel="noopener"><span>Ler na íntegra</span><span>↗</span></a>
+      <p class="doc-nota">Prova pública da tese. Diego Barreto e iFood não são clientes da OpenBI.</p>
     </div>
-    <div class="engenharia">
-      <h3>A engenharia é <span class="serif">invisível.</span></h3>
-      <p>Integração de sistemas, arquitetura de dados, governança, segurança, RAG, permissões, IA. Tudo isso existe — e é exatamente por isso que você não precisa pensar nisso. Você compra o resultado: <strong style="color:#fff">controle e visibilidade sobre toda a empresa, acessíveis por uma pergunta.</strong></p>
+    <div class="casos-reais">
+      <div class="casos-reais-cabecalho">
+        <span class="casos-kicker">Três implementações reais</span>
+        <h3>A empresa ganha tecnologia.<span>O líder visionário fica 10x mais visionário.</span></h3>
+        <p>Três operações diferentes, o mesmo relato: o horizonte do líder se multiplica.</p>
+      </div>
+
+      <div class="casos-lista">
+        <article class="caso-real">
+          <div class="caso-indice"><b>01</b>Rede de farmácias<br>23 lojas<img src="assets/retrato-01.jpg" alt="" loading="lazy"></div>
+          <div class="caso-conteudo">
+            <h4>“Hoje eu enxergo a <mark>rede inteira</mark> com uma nitidez que eu nunca tive <mark>nem de uma única loja</mark>.”</h4>
+            <div class="caso-relato">
+              <p>“Eu geria a folha pelo retrovisor: o número que me mostravam, no ritmo em que conseguiam montar. Minha visão da operação era a visão que me entregavam.</p>
+              <details class="relato-mais"><summary>Ler o relato completo</summary>
+              <p>Quando passei a interrogar os dados direto, entendi o tamanho da diferença. Não é que apareceram erros - é que eu passei a enxergar um processo inteiro que antes eu só supervisionava por amostragem. Perguntas que eu nunca faria, que eu ‘não tinha nem coragem’ de pedir, porque custariam uma semana de alguém trabalhando exclusivo nisso, viraram perguntas de um minuto.</p>
+              <p>O que mudou não foi a folha. Foi o alcance do meu olhar, o horizonte.”</p>
+              </details>
+            </div>
+            <p class="caso-contexto">Folha de 990 colaboradores · 100% validada todo mês · R$ 198 mil recuperados em um semestre</p>
+          </div>
+        </article>
+
+        <article class="caso-real">
+          <div class="caso-indice"><b>02</b>Diretora de Operações<br>Educação em vendas<img src="assets/retrato-02.jpg" alt="" loading="lazy"></div>
+          <div class="caso-conteudo">
+            <h4>“Minha conversão estava em 12% e eu já estava montando plano de ação para Vendas. Perguntei à IA o porquê da queda - <mark>e a resposta me impressionou</mark>.”</h4>
+            <div class="caso-relato">
+              <p>“Eram reuniões marcadas como realizadas que nunca aconteceram. Com os números reais, minha conversão estava normal. Eu ia gastar energia, constranger o time e mexer em processo - para resolver um problema que não existia.</p>
+              <details class="relato-mais"><summary>Ler o relato completo</summary>
+              <p>Descobri até uma planilha paralela do financeiro que ninguém sabia que existia. A sensação é de ter ligado a luz numa casa em que eu andava no escuro, tateando.</p>
+              <p>Isso mudou o jeito como eu formo opinião. Antes de levar qualquer tese para reunião, eu pressiono ela contra os dados - sozinha, na hora. Chego com a hipótese já testada, não com a hipótese para testar.”</p>
+              </details>
+            </div>
+            <p class="caso-contexto">9 sistemas em uma única visão do negócio · atualizada a cada 30 minutos</p>
+          </div>
+        </article>
+
+        <article class="caso-real">
+          <div class="caso-indice"><b>03</b>Operadora de saúde<br>Atendimento<img src="assets/retrato-03.jpg" alt="" loading="lazy"></div>
+          <div class="caso-conteudo">
+            <h4>“Quem decide com <mark>uma resposta só</mark> pensa mais longe do que quem decide <mark>com três</mark>.”</h4>
+            <div class="caso-relato">
+              <p>“A pergunta mais cara da minha operação era a mais simples: o que a empresa sabe sobre isso? Cada resposta dependia de quem atendia, de qual PDF, de qual sistema. Eu liderava uma empresa que sabia muito - e não conseguia usar o que sabia.</p>
+              <details class="relato-mais"><summary>Ler o relato completo</summary>
+              <p>Quando todo esse conhecimento virou uma fonte única, que responde na hora e cita o documento e a página de onde veio, mudou o meu papel dentro da empresa.</p>
+              <p>Parei de arbitrar versões e passei a decidir sobre fatos.”</p>
+              </details>
+            </div>
+            <p class="caso-contexto">Planos, coberturas, carências e procedimentos · uma fonte oficial, em linguagem natural</p>
+          </div>
+        </article>
+      </div>
+      <p class="casos-nota">Relatos na voz dos líderes, reconstruídos a partir de implementações reais.</p>
+
+          </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="wrap reveal">
+    <h2>Toda geração de líderes tem uma virada em que a régua de <span class="serif">"empresa à frente de seu tempo"</span> muda.</h2>
+    <div class="frases">
+      <p><strong>A nossa é agora.</strong><br>A IA deixou de ser assistente de texto e virou <strong>capacidade executiva</strong> - e isso divide os líderes em dois grupos.</p>
+      <p>Uns vão continuar esperando o relatório chegar. Outros vão <strong>conversar com a própria empresa</strong> - e pensar num horizonte que os primeiros não alcançam.</p>
+      <p class="veredito">A OpenBI existe para os <em>segundos</em>.</p>
     </div>
+    <p class="bfb">Built for Builders</p>
+    <p class="quemfaz">Não somos mais uma empresa de IA. Somos quem instala essa capacidade - com estratégia de quem decide e engenharia de quem constrói. Escolhemos poucos clientes por vez, porque implementação profunda não se faz em escala.</p>
+  </div>
+</section>
+
+<section class="camada" id="camada">
+  <div class="wrap reveal">
+    <span class="kicker">Quatro estágios</span>
+    <h2>Da empresa fragmentada<br><span class="serif">ao líder superhumano.</span></h2>
+    <div class="progressao-wrap">
+      <div class="progressao-faixa">OpenBI - solução completa</div>
+      <div class="progressao-scroll" tabindex="0" role="region" aria-label="Matriz comparativa da progressão OpenBI">
+        <table class="progressao">
+          <colgroup><col><col><col><col><col></colgroup>
+          <thead>
+            <tr>
+              <th class="progress-canto" scope="col"><span>Quatro estágios.<br>Uma transformação.</span></th>
+              <th class="progress-head" scope="col">
+                <div class="prog-num">01</div>
+                <div class="prog-visual" aria-hidden="true"><div class="prog-fragmentos"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+              </th>
+              <th class="progress-head" scope="col">
+                <div class="prog-num">02</div>
+                <div class="prog-visual" aria-hidden="true"><div class="prog-unificada"></div></div>
+              </th>
+              <th class="progress-head" scope="col">
+                <div class="prog-meta"><div class="prog-num">03 /</div><div class="prog-camada-label">CAMADA COGNITIVA OPENBI</div></div>
+                <div class="prog-visual" aria-hidden="true"><img class="prog-logo-original" src="assets/openbi-symbol.svg" alt=""></div>
+              </th>
+              <th class="progress-head" scope="col">
+                <div class="prog-num">04</div>
+                <div class="prog-visual" aria-hidden="true"><div class="prog-clareza"></div></div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-empresa">
+              <th scope="row">Sua empresa</th>
+              <td><strong>Fragmentada</strong></td>
+              <td><strong>Unificada</strong></td>
+              <td><strong>Inteligente</strong></td>
+              <td><strong>Conversável</strong></td>
+            </tr>
+            <tr class="row-tecnologia">
+              <th scope="row">Tecnologia</th>
+              <td>Sistemas, planilhas, documentos, mensagens e reuniões</td>
+              <td>Integrações + Data Lake</td>
+              <td>Contexto · Memória · Conhecimento · Permissões · Governança · Ferramentas</td>
+              <td>Inteligência Artificial</td>
+            </tr>
+            <tr class="row-informacao">
+              <th scope="row">Informação</th>
+              <td><strong>Dispersa</strong></td>
+              <td><strong>Centralizada</strong></td>
+              <td><strong>Conhecimento</strong></td>
+              <td><strong>Sabedoria aplicada</strong></td>
+            </tr>
+            <tr class="row-lideranca">
+              <th scope="row">Liderança</th>
+              <td class="prog-lider">INEFICIENTE</td>
+              <td class="prog-lider">DEPENDENTE</td>
+              <td class="prog-lider">INTELIGENTE</td>
+              <td class="prog-lider prog-lider-final">SUPERHUMANO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="progressao-hint">Deslize para comparar os quatro estágios →</p>
+    </div>
+
+    <p class="progressao-fecho">Uma transformação ambiciosa, <strong>implementada com disciplina.</strong></p>
   </div>
 </section>
 
 <section id="seguranca">
   <div class="wrap reveal">
     <span class="kicker">Confiança e segurança</span>
-    <h2>Feito para o padrão de exigência<br>de <span class="serif">quem decide.</span></h2>
+    <h2>Feito de líder para líder,<br><span class="serif">no padrão de exigência de quem decide.</span></h2>
     <div class="conf-grid">
-      <div class="conf-item"><h3>Seus dados ficam com você</h3><p>Infraestrutura na nuvem AWS, na conta da sua empresa, com backups redundantes e auditoria completa.</p></div>
-      <div class="conf-item"><h3>Cada um vê só o que pode</h3><p>Permissões por departamento, usuário e até por linha de dado. O estagiário e o CEO perguntam ao mesmo sistema — e recebem respostas diferentes.</p></div>
-      <div class="conf-item"><h3>A IA não inventa</h3><p>Camadas de verificação garantem respostas fundamentadas nas suas fontes. Se o dado não existe, a resposta é “esse dado não existe”.</p></div>
-      <div class="conf-item"><h3>Sem lock-in</h3><p>Arquitetura independente de fornecedor de modelo ou nuvem. A inteligência construída é um ativo seu.</p></div>
-      <div class="conf-item"><h3>Aproveita o que você já tem</h3><p>Seu investimento em ERP, CRM e BI não é descartado — ele finalmente entrega todo o potencial.</p></div>
-      <div class="conf-item"><h3>Implantação incremental</h3><p>Começamos pelo que dói mais, validamos resultado e expandimos. Sua operação nunca para.</p></div>
+      <div class="conf-item"><h3>Seus dados ficam com você</h3><p>Hoje, eles estão nos sistemas. Com o método OpenBI, seus dados estão armazenados, organizados e unificados no seu data lake. Infraestrutura na nuvem AWS, na conta da sua empresa, com data centers no Brasil, backups redundantes e auditoria completa.</p></div>
+      <div class="conf-item"><h3>Cada um vê o que você permite</h3><p>Permissões por departamento, por pessoa e até por linha de dado. O estagiário e o CEO perguntam ao mesmo sistema - e recebem respostas diferentes.</p></div>
+      <div class="conf-item"><h3>Toda resposta tem fonte</h3><p>Informações rastreáveis: cada número cita de onde veio. Você não precisa pedir double-check a ninguém, nem ter retrabalho - está a um clique de fazer você mesmo as próprias verificações. E quando o dado não existe, a resposta é “esse dado não existe”.</p></div>
+      <div class="conf-item"><h3>Credibilidade com sócios e investidores</h3><p>Conselho, sócios e investidores recebem resposta na hora, com fonte citada. A empresa passa outra solidez - e o líder, outro domínio do negócio. Os dois saem elevados.</p></div>
+      <div class="conf-item"><h3>Seu contexto, seu patrimônio</h3><p>O fornecedor é trocável; o ativo fica. Troque de ERP, de CRM, de plataforma - não há nada para exportar ou transferir: tudo já está protegido no seu Data Lake. Hoje, se o YouTube ficar fora do ar, você não consulta qual vídeo seu teve mais views. Com a OpenBI, sim.</p></div>
     </div>
   </div>
 </section>
 
 <section id="objecoes">
   <div class="wrap reveal">
-    <span class="kicker">Perguntas de quem decide</span>
-    <h2>“Sim, <span class="serif">mas…</span>”</h2>
+    <span class="kicker">Objeções</span>
+    <h2>“Muito foda! <span class="serif">Mas…</span>”</h2>
     <details open>
       <summary>Minha empresa é complexa demais para isso.</summary>
-      <p>Quanto maior a complexidade, maior o custo da fragmentação — e maior o retorno de eliminá-la. Um aeroporto não é controlado olhando para cada piloto: existe uma torre de controle. Sua empresa já tem os aviões, os pilotos e as pistas. O que falta é a torre.</p>
+      <p>Quanto maior a complexidade, maior o custo da fragmentação - e maior o retorno de eliminá-la. Um aeroporto não é controlado olhando para cada piloto: existe uma torre de controle. Sua empresa já tem os aviões, os pilotos e as pistas. O que falta é a torre.</p>
     </details>
     <details>
       <summary>Já tenho ERP, CRM e BI. Não preciso disso.</summary>
-      <p>Perfeito — nós não substituímos nada disso. Seu ERP administra processos; a OpenBI administra decisões. Ter vários sistemas sem integração é ter dez especialistas excelentes que não conversam entre si. Nós somos o coordenador.</p>
+      <p>Perfeito - nós não substituímos nada disso. Seu ERP administra processos; a OpenBI administra decisões. Ter vários sistemas sem integração é ter dez especialistas excelentes que não conversam entre si. Nós somos o gestor de projetos, que coordena tudo e dá fluidez aos projetos.</p>
     </details>
     <details>
       <summary>Isso deve ser muito caro.</summary>
-      <p>Sua empresa já paga pela desorganização: em retrabalho, decisões atrasadas e horas de executivos consolidando dados. Some o custo/hora da sua liderança gasto procurando informação — o retorno costuma começar antes do projeto terminar.</p>
+      <p>Sua empresa já paga pela desorganização: em retrabalho, decisões atrasadas e horas de executivos consolidando dados. Some o custo/hora da sua liderança gasto procurando informação - é contra esse número que o investimento se compara.</p>
     </details>
     <details>
       <summary>Tenho medo de a IA cometer erros.</summary>
-      <p>Os erros já acontecem hoje — em planilhas desatualizadas e dados duplicados. A OpenBI responde apenas com base nas suas fontes, cita de onde veio cada número e, quando o dado não existe, diz exatamente isso. A IA orienta; a sua empresa decide.</p>
+      <p>Os erros já acontecem hoje - em planilhas desatualizadas e dados duplicados. A OpenBI responde apenas com base nas suas fontes, cita de onde veio cada número e, quando o dado não existe, diz exatamente isso. A IA orienta; a sua empresa decide.</p>
     </details>
     <details>
       <summary>Implementação de tecnologia sempre dá dor de cabeça.</summary>
-      <p>Projetos falham quando tentam transformar tudo de uma vez. Nossa implantação é incremental: conectamos primeiro o que dói mais, validamos o resultado e expandimos — com a empresa operando normalmente o tempo todo.</p>
+      <p>Projetos falham quando tentam transformar tudo de uma vez. Nossa implantação é incremental: conectamos primeiro o que dói mais, validamos o resultado e expandimos - com a empresa operando normalmente o tempo todo. E ela não exige empresa organizada: a desorganização é parte do problema que o projeto existe para resolver - começamos exatamente pelo que você já tem.</p>
     </details>
-  </div>
-</section>
-
-<section class="impl" id="implantacao">
-  <div class="wrap reveal">
-    <span class="kicker">Implantação</span>
-    <h2>Começamos pela empresa.<br><span class="serif">Não pela tecnologia.</span></h2>
-    <div class="timeline">
-      <div class="t-item"><div class="n">ETAPA 1</div><h3>Diagnóstico</h3><p>Mapeamos decisões, processos, sistemas e os pontos onde a falta de contexto mais custa à liderança.</p></div>
-      <div class="t-item"><div class="n">ETAPA 2</div><h3>Blueprint</h3><p>Desenhamos a arquitetura, a governança e o primeiro caso de alto impacto — com escopo e critérios claros.</p></div>
-      <div class="t-item"><div class="n">ETAPA 3</div><h3>Implementação</h3><p>Conectamos as fontes prioritárias, construímos o contexto e entregamos a experiência conversacional.</p></div>
-      <div class="t-item"><div class="n">ETAPA 4</div><h3>Evolução contínua</h3><p>Novas áreas, processos e ações entram progressivamente, conforme valor e confiança se comprovam.</p></div>
-    </div>
-    <p class="frase">Uma transformação ambiciosa, implementada com disciplina.<br><span class="serif">Sem trocar tudo. Sem começar por tudo.</span></p>
+    <details>
+      <summary>Isso é só para mim ou para a empresa toda?</summary>
+      <p>Para os dois. Seus gestores ficam mais estratégicos. Cada gestor tem sua permissão - e para de gastar a semana montando relatório para você. A produtividade sobe na equipe inteira.</p>
+    </details>
+    <details>
+      <summary>Meu time de tecnologia pode construir isso internamente.</summary>
+      <p>Pode - o iFood construiu. Com tecnologia como core do negócio, um CEO obcecado pelo tema, time de dados dedicado e 7.000 pessoas para amortizar o investimento. Se esse não é o seu caso, o caminho interno custa o ativo mais caro da sua organização: o seu tempo e o do seu time - durante meses, fora do core. Nós instalamos a capacidade pronta.</p>
+    </details>
+    <details>
+      <summary>E se um concorrente copiar? E se a próxima versão do ChatGPT fizer isso sozinha?</summary>
+      <p>A tecnologia é igual para todos e se copia em meses - qualquer um compra o mesmo modelo e as mesmas integrações. O que não se copia é o contexto da sua empresa: as fontes conectadas, a linguagem do seu negócio, as decisões acumuladas. Cada mês de uso torna o sistema mais insubstituível. O modelo é substituível; o contexto da sua empresa, não.</p>
+    </details>
   </div>
 </section>
 
 <section class="final" id="agendar">
   <div class="wrap reveal">
     <img src="assets/openbi-symbol-dark.svg" alt="">
-    <h2>Quem tem visibilidade tem controle.<br><span class="serif">Quem tem controle decide melhor.</span></h2>
-    <p>Em 15 minutos, mostramos como sua empresa pode responder — pelas próprias fontes — as perguntas que hoje levam dias.</p>
+    <h2><span class="serif">Se é o olho do dono que engorda o boi,</span><br>imagine quando esse olho consegue enxergar a empresa inteira.</h2>
     <div class="cta-row">
       <a class="btn btn-primary" style="background:var(--red)" href="#TODO-calendly" target="_blank" rel="noopener">Agendar call de 15 minutos</a>
       <a class="btn btn-dark-ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
-    <p class="minor">Já decidiu? <a href="#contato">Inicie seu projeto agora</a>.</p>
+    <p class="minor">Já decidiu? <a href="#contato">Fale direto com a gente</a>.</p>
     <p class="aviso">Sem apresentação genérica. Começamos pela realidade da sua empresa.</p>
   </div>
 </section>
@@ -653,6 +994,163 @@ const chatIO = new IntersectionObserver(es => {
   }
 },{threshold:.25});
 chatIO.observe(chat);
+
+/* ─── Norton Demo - porte vanilla da cena do Claude Design ─── */
+(function(){
+  const phone = document.querySelector('.nphone');
+  if (!phone) return;
+
+  const QUESTION = "Quais clientes estão em atraso, têm contrato vencendo nos próximos 30 dias e ainda possuem pedidos em produção?";
+  const TYPE_START = 0.8;
+  const Q_TIMES = (() => { const out=[]; let t=TYPE_START;
+    for (let i=0;i<QUESTION.length;i++){ const ch=QUESTION[i];
+      let d = 0.052 + 0.018*Math.abs(Math.sin(i*12.9898));
+      if (ch===' ') d=0.032; if (ch===',') d+=0.24; if (ch==='?') d+=0.10;
+      t+=d; out.push(t); } return out; })();
+  const Q_END = Q_TIMES[Q_TIMES.length-1];
+  const SEND_T = Q_END+0.55, KB_DOWN_T = SEND_T+0.10, THINK_T = SEND_T+0.25, RESP_START = SEND_T+3.1;
+  const CPS = 0.019;
+  const rows = [
+    {name:'Atlas Engenharia', detail:'R$ 482 mil em atraso · contrato vence em 18 dias · 3 pedidos em produção', dot:'#DA3A38'},
+    {name:'Horizon Foods',    detail:'R$ 129 mil em atraso · contrato vence em 9 dias · 1 pedido em produção',  dot:'#DA3A38'},
+    {name:'Prime Logistics',  detail:'R$ 92 mil em atraso · contrato vence em 27 dias · 2 pedidos em produção', dot:'#E08A2B'},
+    {name:'Vertex Mining',    detail:'R$ 56 mil em atraso · contrato vence em 30 dias · 1 pedido em produção',  dot:'#E08A2B'},
+  ];
+  const bullets = [
+    'R$ 759 mil em valores vencidos continuam sendo produzidos.',
+    'Dois contratos representam R$ 8,4 milhões em receita anual.',
+    'Nenhum desses clientes possui bloqueio automático para novas ordens de produção.',
+  ];
+  const BLOCKS = (() => { const b=[]; let t=RESP_START;
+    const typ = (type,text,extra={}) => { const dur=text.length*CPS; b.push({type,text,start:t,end:t+dur,...extra}); t+=dur+0.22; };
+    const fade = (type,dur,extra={}) => { b.push({type,start:t,end:t+0.34,...extra}); t+=dur; };
+    typ('p','Perfeito. Cruzei os dados do ERP, CRM, Financeiro e Produção. Encontrei 4 clientes que atendem aos três critérios solicitados.');
+    fade('tblHead',0.30);
+    rows.forEach(r => fade('tblRow',0.30,{row:r}));
+    t+=0.15;
+    fade('h',0.55,{text:'Resumo Executivo'});
+    bullets.forEach(bt => typ('bullet',bt));
+    t+=0.05;
+    typ('priority','Maior prioridade: Atlas Engenharia.');
+    typ('p','Recomendo envolver Financeiro e Comercial antes da próxima entrega para definir a continuidade da produção.');
+    typ('p','Posso também gerar um plano de ação para cada cliente ou listar os responsáveis comerciais por cada conta.');
+    return b; })();
+  const DURATION = BLOCKS[BLOCKS.length-1].end + 3.4;
+  const clamp = (v,a,b) => Math.max(a,Math.min(b,v));
+  const countLE = (arr,t) => { let n=0; for (let i=0;i<arr.length;i++) if (arr[i]<=t) n++; return n; };
+
+  /* teclado */
+  const nkb = document.getElementById('nkb');
+  const KROWS = [['q','w','e','r','t','y','u','i','o','p'],['a','s','d','f','g','h','j','k','l'],['z','x','c','v','b','n','m']];
+  const keyEls = {};
+  const mkRow = (style) => { const r=document.createElement('div'); r.className='krow'; if(style) r.style.cssText=style; nkb.appendChild(r); return r; };
+  let r0=mkRow(); KROWS[0].forEach(k=>{const e=document.createElement('div');e.className='k';e.textContent=k.toUpperCase();keyEls[k]=e;r0.appendChild(e);});
+  let r1=mkRow('padding:0 20px'); KROWS[1].forEach(k=>{const e=document.createElement('div');e.className='k';e.textContent=k.toUpperCase();keyEls[k]=e;r1.appendChild(e);});
+  let r2=mkRow('padding:0 3px');
+  const mkSp=(row,label,flex)=>{const e=document.createElement('div');e.className='k sp';e.style.flex=flex;e.textContent=label;row.appendChild(e);return e;};
+  mkSp(r2,'⇧','1.5'); KROWS[2].forEach(k=>{const e=document.createElement('div');e.className='k';e.textContent=k.toUpperCase();keyEls[k]=e;r2.appendChild(e);}); mkSp(r2,'⌫','1.5');
+  let r3=mkRow('padding:0 3px');
+  mkSp(r3,'123','1.4'); mkSp(r3,'🌐','0.9');
+  const spaceKey=document.createElement('div'); spaceKey.className='k sp'; spaceKey.style.flex='5'; spaceKey.style.fontSize='15px'; spaceKey.style.background='#fff'; spaceKey.textContent='espaço'; keyEls[' ']=spaceKey; r3.appendChild(spaceKey);
+  mkSp(r3,'return','2');
+
+  /* resposta */
+  const nresp = document.getElementById('nresp');
+  const cur = document.createElement('span'); cur.className='ncur';
+  const blockEls = BLOCKS.map(b => {
+    let el;
+    if (b.type==='p') { el=document.createElement('p'); el.appendChild(document.createTextNode('')); }
+    else if (b.type==='priority') { el=document.createElement('p'); const s=document.createElement('strong'); s.style.fontWeight='700'; el.appendChild(s); el.appendChild(document.createTextNode('')); }
+    else if (b.type==='bullet') { el=document.createElement('div'); el.className='nbul'; const d=document.createElement('span'); d.className='bd'; d.textContent='•'; const s=document.createElement('span'); s.style.flex='1'; s.appendChild(document.createTextNode('')); el.appendChild(d); el.appendChild(s); }
+    else if (b.type==='h') { el=document.createElement('div'); el.className='nh'; el.textContent=b.text; }
+    else if (b.type==='tblHead') {
+      el=document.createElement('div'); el.className='ntblw';
+      const tb=document.createElement('table');
+      tb.innerHTML='<thead><tr><th style="width:38%">Cliente</th><th>Situação</th></tr></thead>';
+      const body=document.createElement('tbody');
+      rows.forEach(r=>{ const tr=document.createElement('tr'); tr.style.opacity='0';
+        tr.innerHTML='<td class="cn"></td><td class="cd"><span></span> <span class="ndot"></span></td>';
+        tr.querySelector('.cn').textContent=r.name;
+        tr.querySelector('.cd span').textContent=r.detail;
+        tr.querySelector('.ndot').style.background=r.dot;
+        body.appendChild(tr); });
+      tb.appendChild(body); el.appendChild(tb); el._rows=[...body.children];
+    }
+    else if (b.type==='tblRow') { return null; }
+    el.style.display='none'; nresp.appendChild(el); return el;
+  });
+
+  const nfield=document.getElementById('nfield'), nsend=document.getElementById('nsend'),
+        nbubble=document.getElementById('nbubble'), nbubbleTxt=document.getElementById('nbubbleTxt'),
+        nthink=document.getElementById('nthink'), nshimTxt=document.getElementById('nshimTxt'),
+        nthinkSpark=document.getElementById('nthinkSpark'), nchat=document.getElementById('nchat'),
+        ninput=document.getElementById('ninput'), nhome=document.getElementById('nhome');
+  const KB_H=300, INPUT_H=58, H=932, CONTENT_TOP=104;
+  const media = window.matchMedia('(min-width:1150px)');
+  let t0 = performance.now();
+
+  function frame(now){
+    requestAnimationFrame(frame);
+    if (!media.matches) { t0 = now - ((now - t0) % (DURATION*1000)); return; }
+    const t = ((now - t0)/1000) % DURATION;
+    const blinkOn = Math.floor(t*1.6)%2===0;
+
+    /* campo + teclado */
+    const typing = t>=TYPE_START && t<SEND_T;
+    const n = countLE(Q_TIMES,t);
+    const typed = t<SEND_T ? QUESTION.slice(0,n) : '';
+    if (typed.length){ nfield.classList.add('hastext'); nfield.textContent=typed; if (typing){ cur.style.opacity=blinkOn?1:0; nfield.appendChild(cur);} }
+    else { nfield.classList.remove('hastext'); nfield.textContent='Mensagem'; }
+    nsend.classList.toggle('active', typed.length>0 && t<SEND_T);
+    let pressed=null;
+    if (typing){ const idx=n-1; if (idx>=0 && (t-Q_TIMES[idx])<0.075) pressed=QUESTION[idx].toLowerCase(); }
+    for (const k in keyEls) keyEls[k].classList.toggle('pressed', k===pressed);
+    const kbShown = t<SEND_T ? 1 : clamp(1-(t-KB_DOWN_T)/0.42,0,1);
+    const kbEff = 1-Math.pow(1-kbShown,2);
+    nkb.style.transform = 'translateY('+((1-kbEff)*(KB_H+4))+'px)';
+    nkb.style.visibility = kbShown>0.001?'visible':'hidden';
+    nhome.style.display = kbShown<0.05?'block':'none';
+    const inputBottom = 22+(KB_H-22)*kbEff;
+    ninput.style.bottom = inputBottom+'px';
+    nchat.style.height = (H-inputBottom-INPUT_H-6-CONTENT_TOP)+'px';
+
+    /* bolha do usuário */
+    if (t>=SEND_T){ const p=clamp((t-SEND_T)/0.28,0,1), e=1-Math.pow(1-p,3);
+      nbubble.style.display='flex'; nbubbleTxt.textContent=QUESTION;
+      nbubbleTxt.style.opacity=e; nbubbleTxt.style.transform='translateY('+((1-e)*8)+'px)';
+    } else nbubble.style.display='none';
+
+    /* consultando… */
+    if (t>=THINK_T && t<RESP_START){ nthink.style.display='flex';
+      nshimTxt.style.backgroundPositionX=(140-((t*55)%260))+'%';
+      const pulse=0.7+0.3*Math.sin(t*4);
+      nthinkSpark.style.opacity=pulse; nthinkSpark.style.transform='scale('+(0.9+0.12*Math.sin(t*4))+')';
+    } else nthink.style.display='none';
+
+    /* resposta em streaming */
+    nresp.style.display = t>=RESP_START?'flex':'none';
+    if (t>=RESP_START){
+      let rowIdx=0;
+      BLOCKS.forEach((b,i)=>{
+        if (b.type==='tblRow'){ const head=BLOCKS.find(x=>x.type==='tblHead'); const headEl=blockEls[BLOCKS.indexOf(head)];
+          const tr=headEl._rows[rowIdx++]; if (t<b.start){ tr.style.opacity='0'; } else { const p=clamp((t-b.start)/0.34,0,1); tr.style.opacity=String(1-Math.pow(1-p,3)); } return; }
+        const el=blockEls[i]; if (!el) return;
+        if (t<b.start){ el.style.display='none'; return; }
+        el.style.display = b.type==='bullet'?'flex':'block';
+        if (b.type==='h'||b.type==='tblHead'){ const p=clamp((t-b.start)/0.34,0,1), e=1-Math.pow(1-p,3);
+          el.style.opacity=e; el.style.transform='translateY('+((1-e)*7)+'px)'; return; }
+        const nn=Math.max(0,Math.floor((t-b.start)/CPS)); const shown=b.text.slice(0,nn); const isTyping=nn<b.text.length;
+        if (b.type==='priority'){ const ci=shown.indexOf(':');
+          el.firstChild.textContent = ci>=0?shown.slice(0,ci+1):shown;
+          el.lastChild.textContent = ci>=0?shown.slice(ci+1):'';
+        } else if (b.type==='bullet'){ el.lastChild.firstChild.textContent=shown; }
+        else { el.firstChild.textContent=shown; }
+        if (isTyping){ cur.style.opacity=blinkOn?1:0; (b.type==='bullet'?el.lastChild:el).appendChild(cur); }
+      });
+    }
+  }
+  requestAnimationFrame(frame);
+})();
 </script>
 </body>
 </html>
