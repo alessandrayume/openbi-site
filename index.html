@@ -219,9 +219,18 @@ details p{margin-top:16px;color:#4A4A54;max-width:840px}
 
 /* NORTON DEMO - iPhone no hero */
 .hero .wrap{position:relative}
-.nphone{position:absolute;left:668px;right:0;margin:0 auto;width:380px;top:-83px;z-index:5;display:none}
+/* Padrao responsivo: celular no fluxo vertical, logo abaixo do conteudo principal */
+.nphone{position:static;display:block;width:380px;margin:44px auto 4px;z-index:5}
+/* Escala do celular para caber em telas menores (transform = consistente no Safari).
+   .nphone reserva o espaco ja escalado; .nphone-scale encolhe o conteudo (380x845). */
+.nphone-scale{transform-origin:top left}
+@media(max-width:470px){.nphone{width:342px;height:761px}.nphone-scale{transform:scale(.9)}}
+@media(max-width:430px){.nphone{width:312px;height:693px}.nphone-scale{transform:scale(.82)}}
+@media(max-width:372px){.nphone{width:281px;height:625px}.nphone-scale{transform:scale(.74)}}
+@media(max-width:332px){.nphone{width:251px;height:558px}.nphone-scale{transform:scale(.66)}}
 @media(min-width:1150px){
-  .nphone{display:block}
+  /* Desktop grande: celular ancorado a direita do texto, como antes */
+  .nphone{position:absolute;left:668px;right:0;top:-83px;margin:0 auto}
   .hero h1{font-size:clamp(40px,4.8vw,68px);max-width:700px}
   .hero .sub{max-width:620px}
   .hero .kicker{max-width:700px;font-size:clamp(26px,3.4vw,44px)}
@@ -241,7 +250,7 @@ details p{margin-top:16px;color:#4A4A54;max-width:840px}
 .nstatus .ntime{font-size:17px;font-weight:600;color:#1F1E1C;letter-spacing:.3px}
 .nisland{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:116px;height:32px;background:#000;border-radius:20px}
 .nsig{display:flex;align-items:center;gap:7px}
-.nheader{position:absolute;top:54px;left:0;width:430px;height:50px;display:flex;align-items:center;justify-content:center;z-index:20;background:rgba(251,250,249,.86);backdrop-filter:blur(12px)}
+.nheader{position:absolute;top:54px;left:0;width:430px;height:50px;display:flex;align-items:center;justify-content:center;z-index:20;background:rgba(251,250,249,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 .nheader .ntitle{display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#1F1E1C;letter-spacing:-.3px;white-space:nowrap}
 .nheader .nmenu{position:absolute;left:16px}.nheader .nedit{position:absolute;right:16px}
 .nchat{position:absolute;top:104px;left:0;width:430px;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 34px);mask-image:linear-gradient(to bottom,transparent 0,#000 34px)}
@@ -417,6 +426,7 @@ footer img{height:48px;opacity:.95}
       </div>
     </div>
     <div class="nphone" aria-hidden="true">
+      <div class="nphone-scale">
       <div class="nphone-frame">
         <div class="nscreen">
           <div class="nstatus">
@@ -455,6 +465,7 @@ footer img{height:48px;opacity:.95}
         </div>
       </div>
       <p class="nphone-cap">Simulação - dados ilustrativos</p>
+      </div>
     </div>
     <div class="abertura reveal">
       <div class="alead">
@@ -1086,12 +1097,17 @@ chatIO.observe(chat);
         nthinkSpark=document.getElementById('nthinkSpark'), nchat=document.getElementById('nchat'),
         ninput=document.getElementById('ninput'), nhome=document.getElementById('nhome');
   const KB_H=300, INPUT_H=58, H=932, CONTENT_TOP=104;
-  const media = window.matchMedia('(min-width:1150px)');
+  /* Anima sempre que o celular estiver visivel (desktop e responsivo);
+     pausa quando escondido ou fora da tela, mantendo a linha do tempo continua. */
+  let inView = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((es)=>{ inView = es[0].isIntersecting; }, {threshold:.05}).observe(phone);
+  }
   let t0 = performance.now();
 
   function frame(now){
     requestAnimationFrame(frame);
-    if (!media.matches) { t0 = now - ((now - t0) % (DURATION*1000)); return; }
+    if (phone.offsetParent === null || !inView) { t0 = now - ((now - t0) % (DURATION*1000)); return; }
     const t = ((now - t0)/1000) % DURATION;
     const blinkOn = Math.floor(t*1.6)%2===0;
 
