@@ -30,6 +30,8 @@ p.lead{font-size:clamp(18px,2.1vw,21px);color:#3E3E48;max-width:820px}
 .btn{display:inline-block;padding:17px 34px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:all .2s}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-primary:hover{background:var(--red)}
+.btn-red{background:var(--red)}
+.btn-red:hover{background:#fff;color:var(--ink)}
 .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
 .btn-ghost:hover{background:var(--ink);color:#fff}
 .btn-dark-ghost{border:1.5px solid #fff;color:#fff}
@@ -44,6 +46,8 @@ nav .links{display:flex;gap:30px;align-items:center}
 nav a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500}
 nav .btn{padding:11px 24px;font-size:14px;background:var(--ink);color:#fff}
 nav .btn:hover{background:var(--red)}
+nav .btn.btn-red{background:var(--red)}
+nav .btn.btn-red:hover{background:#fff;color:var(--ink)}
 @media(max-width:820px){nav .links a:not(.btn){display:none}nav .btn{white-space:nowrap;padding:10px 18px;font-size:13px}nav .logo img{height:48px}}
 @media(max-width:600px){nav .btn-ext{display:none}}
 
@@ -401,7 +405,7 @@ footer img{height:48px;opacity:.95}
       <a href="#problema">O problema</a>
       <a href="#transformacao">A transformação</a>
       <a href="#demo">Demonstração</a>
-      <a class="btn" href="https://cal.com/openbi.tech/open?overlayCalendar=true" target="_blank" rel="noopener">Marcar conversa de 30 minutos</a>
+      <a class="btn btn-red" href="https://cal.com/openbi.tech/open?overlayCalendar=true" target="_blank" rel="noopener">Marcar conversa de 30 minutos</a>
     </div>
   </div>
 </nav>
@@ -421,7 +425,7 @@ footer img{height:48px;opacity:.95}
         <p>Para você decidir em minutos, enxergar tudo o que queria - <em>e até o que não queria</em> - e <strong>voltar a pensar no futuro</strong>.</p>
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://cal.com/openbi.tech/open?overlayCalendar=true" target="_blank" rel="noopener">Marcar conversa de 30 minutos</a>
+        <a class="btn btn-primary btn-red" href="https://cal.com/openbi.tech/open?overlayCalendar=true" target="_blank" rel="noopener">Marcar conversa de 30 minutos</a>
         <a class="btn btn-ghost" href="https://wa.me/5511999750078?text=Oi%2C%20Ale.%20Conheci%20a%20OpenBI%20pelo%20site%20e%20quero%20entender%20o%20que%20meu%20neg%C3%B3cio%20poderia%20me%20responder%20se%20estivesse%20conectado." target="_blank" rel="noopener">Falar com a founder no WhatsApp</a>
       </div>
     </div>
@@ -964,7 +968,7 @@ footer img{height:48px;opacity:.95}
     <img src="assets/openbi-symbol-dark.svg" alt="">
     <h2><span class="serif">Se é o olho do dono que engorda o boi,</span><br>imagine quando esse olho consegue enxergar a empresa inteira.</h2>
     <div class="cta-row">
-      <a class="btn btn-primary" style="background:var(--red)" href="https://cal.com/openbi.tech/open?overlayCalendar=true" target="_blank" rel="noopener">Marcar conversa de 30 minutos</a>
+      <a class="btn btn-primary btn-red" href="https://cal.com/openbi.tech/open?overlayCalendar=true" target="_blank" rel="noopener">Marcar conversa de 30 minutos</a>
       <a class="btn btn-dark-ghost" href="https://wa.me/5511999750078?text=Oi%2C%20Ale.%20Conheci%20a%20OpenBI%20pelo%20site%20e%20quero%20entender%20o%20que%20meu%20neg%C3%B3cio%20poderia%20me%20responder%20se%20estivesse%20conectado." target="_blank" rel="noopener">Falar com a founder no WhatsApp</a>
     </div>
     <p class="minor">Já decidiu? <a href="#contato">Fale direto com a gente</a>.</p>
