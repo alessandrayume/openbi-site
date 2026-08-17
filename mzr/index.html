@@ -561,7 +561,7 @@ video.demo{height:716px;border-radius:36px;background:#000;display:block}
     cur = Math.max(0, Math.min(slides.length-1, i));
     slides.forEach((sl,n)=>{
       sl.classList.toggle('active', n===cur);
-      sl.querySelectorAll('video').forEach(v=>{ if(n===cur){ v.currentTime=0; v.play().catch(()=>{}); } else v.pause(); });
+      sl.querySelectorAll('video').forEach(v=>{ if(n===cur){ v.currentTime=0; v.playbackRate=1.25; v.play().catch(()=>{}); } else v.pause(); });
     });
     counter.textContent = (cur+1)+' / '+slides.length;
     history.replaceState(null,'','#'+(cur+1));
